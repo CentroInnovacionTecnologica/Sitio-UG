@@ -1,0 +1,74 @@
+<header class="ug-navbar" [class.ug-navbar--scrolled]="isScrolled">
+  <div class="ug-navbar__container">
+
+    <!-- ===============================
+         LOGO / MARCA
+         =============================== -->
+    <a routerLink="/" class="ug-navbar__logo" (click)="closeMenu()">
+      <span class="ug-navbar__logo-mark">UG</span>
+      <span class="ug-navbar__logo-text">UNIFORMES GRACIELA</span>
+    </a>
+
+    <!-- ===============================
+         MENÚ DESKTOP
+         =============================== -->
+    <nav class="ug-navbar__desktop">
+      <a
+        routerLink="/"
+        routerLinkActive="ug-navbar__link--active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="ug-navbar__link"
+      >
+        INICIO
+      </a>
+
+      <a
+        routerLink="/nosotros"
+        routerLinkActive="ug-navbar__link--active"
+        class="ug-navbar__link"
+      >
+        NOSOTROS
+      </a>
+
+      <a
+        routerLink="/productos"
+        routerLinkActive="ug-navbar__link--active"
+        class="ug-navbar__link"
+      >
+        PRODUCTOS
+      </a> 
+
+      <a
+        routerLink="/contacto"
+        routerLinkActive="ug-navbar__link--active"
+        class="ug-navbar__link"
+      >
+        CONTACTO
+      </a>
+
+      <a routerLink="/contacto" class="ug-navbar__cta">
+        COTIZAR
+      </a>
+    </nav>
+
+    <!-- ===============================
+         BOTÓN MENÚ MÓVIL
+         =============================== -->
+    <button class="ug-navbar__toggle" type="button" (click)="toggleMenu()" aria-label="Abrir menú">
+      <span [class.active]="menuOpen"></span>
+      <span [class.active]="menuOpen"></span>
+      <span [class.active]="menuOpen"></span>
+    </button>
+  </div>
+
+  <!-- ===============================
+       MENÚ MOBILE
+       =============================== -->
+  <div class="ug-navbar__mobile" [class.ug-navbar__mobile--open]="menuOpen">
+    <a routerLink="/" (click)="closeMenu()">INICIO</a>
+    <a routerLink="/productos" (click)="closeMenu()">PRODUCTOS</a>
+    <a routerLink="/nosotros" (click)="closeMenu()">NOSOTROS</a>
+    <a routerLink="/contacto" (click)="closeMenu()">CONTACTO</a>
+    <a routerLink="/contacto" (click)="closeMenu()">COTIZAR</a>
+  </div>
+</header>

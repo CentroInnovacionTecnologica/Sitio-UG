@@ -1,0 +1,159 @@
+<section class="ug-home" id="inicio">
+
+  <!-- =====================================================
+       HERO PRINCIPAL / PRIMER IMPACTO
+       ===================================================== -->
+  <div class="ug-home-hero">
+    <div class="ug-home-hero__pattern"></div>
+    <div class="ug-home-hero__glow ug-home-hero__glow--one"></div>
+    <div class="ug-home-hero__glow ug-home-hero__glow--two"></div>
+
+    <div class="ug-home-hero__container">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="ug-home-hero__content">
+        <div class="ug-home-hero__badge">
+          <span></span>
+          UG UNIFORMES GRACIELA · DURANGO
+        </div>
+
+        <h1 class="ug-home-hero__title">
+          UNIFORMES QUE
+          <span>PROYECTAN</span>
+          IDENTIDAD
+        </h1>
+
+        <p class="ug-home-hero__text">
+          Soluciones textiles para escuelas, empresas e instituciones. Uniformes,
+          bordado, serigrafía, sublimado y personalización profesional para que tu
+          organización vista con presencia, calidad y confianza.
+        </p>
+
+        <div class="ug-home-hero__actions">
+          <a routerLink="/contacto" class="ug-btn ug-btn--primary">COTIZAR AHORA</a>
+          <a routerLink="/productos" class="ug-btn ug-btn--outline">VER PRODUCTOS</a>
+        </div>
+
+        <div class="ug-home-hero__trust">
+          <div>
+            <strong>25+</strong>
+            <span>Años de trayectoria</span>
+          </div>
+
+          <div>
+            <strong>6</strong>
+            <span>Divisiones de servicio</span>
+          </div>
+
+          <div>
+            <strong>DGO</strong>
+            <span>Atención en Durango</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA / VISUAL ÚNICO -->
+      <div class="ug-home-hero__visual">
+        <div class="ug-home-hero__blob"></div>
+
+        <div class="ug-home-hero__product-card ug-home-hero__product-card--main">
+          <img src="/logo.jpg" alt="Uniformes Graciela">
+        </div>
+
+        <div class="ug-home-hero__floating ug-home-hero__floating--top">
+          <strong>Bordado</strong>
+          <span>Logotipos y detalles</span>
+        </div>
+
+        <div class="ug-home-hero__floating ug-home-hero__floating--bottom">
+          <strong>Uniformes</strong>
+          <span>Escolares e industriales</span>
+        </div>
+
+        <div class="ug-home-hero__seal">
+          <span>UG</span>
+          <small>CALIDAD TEXTIL</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =====================================================
+       CATEGORÍAS EN MOVIMIENTO
+       ===================================================== -->
+  <div class="ug-home-marquee">
+    <div class="ug-home-marquee__track">
+      <span *ngFor="let categoria of categorias">{{ categoria }}</span>
+      <span *ngFor="let categoria of categorias">{{ categoria }}</span>
+      <span *ngFor="let categoria of categorias">{{ categoria }}</span>
+    </div>
+  </div>
+
+  <!-- =====================================================
+       BLOQUE DE CONVENCIMIENTO
+       ===================================================== -->
+  <section class="ug-home-reason">
+    <div class="ug-home-reason__left">
+      <p class="ug-eyebrow">POR QUÉ ELEGIRNOS</p>
+      <h2>UNA SOLUCIÓN COMPLETA PARA VESTIR A TU EQUIPO</h2>
+      <p>
+        En UG Uniformes no solo fabricamos prendas: ayudamos a construir imagen,
+        identidad y presentación profesional para cada escuela, empresa u organización.
+      </p>
+    </div>
+
+    <div class="ug-home-reason__right">
+      <article class="ug-home-reason__item" *ngFor="let ventaja of ventajas">
+        <span>{{ ventaja.numero }}</span>
+        <div>
+          <h3>{{ ventaja.titulo }}</h3>
+          <p>{{ ventaja.texto }}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       BLOQUE PREMIUM / CTA INTERMEDIO
+       ===================================================== -->
+  <section class="ug-home-feature">
+    <div class="ug-home-feature__content">
+      <p class="ug-eyebrow">SERVICIO INTEGRAL</p>
+      <h2>DESDE LA IDEA HASTA EL UNIFORME FINAL</h2>
+      <p>
+        Te ayudamos a definir el tipo de uniforme, colores, personalización y
+        detalles necesarios para que tu pedido tenga una presentación profesional.
+      </p>
+
+      <div class="ug-home-feature__chips">
+        <span>Escolares</span>
+        <span>Industriales</span>
+        <span>Empresariales</span>
+        <span>Bordado</span>
+        <span>Serigrafía</span>
+        <span>Sublimado</span>
+      </div>
+
+      <a routerLink="/contacto">SOLICITAR ASESORÍA</a>
+    </div>
+
+    <div class="ug-home-feature__panel">
+      <div class="ug-home-feature__line">
+        <strong>01</strong>
+        <span>Escuchamos tu solicitud</span>
+      </div>
+
+      <div class="ug-home-feature__line">
+        <strong>02</strong>
+        <span>Definimos producto y personalización</span>
+      </div>
+
+      <div class="ug-home-feature__line">
+        <strong>03</strong>
+        <span>Preparamos una solución textil adecuada</span>
+      </div>
+    </div>
+  </section>
+
+</section>

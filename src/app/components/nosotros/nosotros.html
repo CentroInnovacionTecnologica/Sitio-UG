@@ -1,0 +1,122 @@
+<section class="ug-nosotros-page" id="nosotros">
+
+  <!-- ===============================
+       BLOQUE INSTITUCIONAL
+       =============================== -->
+  <div class="ug-nosotros-intro">
+    <div class="ug-nosotros-intro__image">
+      <div class="ug-nosotros-intro__shape"></div>
+      <img src="/logo.jpg" alt="UG Uniformes">
+    </div>
+
+    <div class="ug-nosotros-intro__text">
+      <p class="ug-eyebrow">NUESTRA EMPRESA</p>
+
+      <h2>UNIFORMES CON IDENTIDAD PARA CADA ORGANIZACIÓN</h2>
+
+      <p>
+        De acuerdo con la información organizacional de la empresa, UG Uniformes
+        cuenta con una trayectoria de más de 25 años en el estado de Durango.
+      </p>
+
+      <p>
+        Su oferta contempla uniformes escolares, uniformes industriales y ropa de
+        trabajo, además de bordado, serigrafía, sublimado, accesorios y corte láser.
+      </p>
+
+      <div class="ug-nosotros-intro__badges">
+        <span>Uniformes escolares</span>
+        <span>Uniformes industriales</span>
+        <span>Bordado</span>
+        <span>Serigrafía</span>
+        <span>Sublimado</span>
+        <span>Corte láser</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================
+       MISIÓN Y VISIÓN
+       =============================== -->
+  <div class="ug-nosotros-mv">
+    <article class="ug-nosotros-mv__card">
+      <span>MISIÓN</span>
+      <h3>Vestir con calidad e identidad</h3>
+      <p>
+        Ofrecer productos textiles para vestir, accesibles, de calidad y a bajo
+        costo que identifiquen a las personas y a las organizaciones de acuerdo
+        a sus necesidades.
+      </p>
+    </article>
+
+    <article class="ug-nosotros-mv__card ug-nosotros-mv__card--dark">
+      <span>VISIÓN</span>
+      <h3>Ser una empresa líder en su ramo</h3>
+      <p>
+        Empresa líder en su ramo, con imagen propia, sólida y estable, que preste
+        el mejor servicio por medio de una buena organización con capacidad para
+        cubrir las necesidades del mercado.
+      </p>
+    </article>
+  </div>
+
+  <!-- ===============================
+       DIVISIONES
+       =============================== -->
+  <div class="ug-nosotros-divisiones">
+    <div class="ug-section-head">
+      <p class="ug-eyebrow">LO QUE HACEMOS</p>
+      <h2>DIVISIONES Y SERVICIOS</h2>
+      <p>
+        La empresa integra distintas líneas textiles y servicios de personalización
+        para atender pedidos escolares, industriales, institucionales y especiales.
+      </p>
+    </div>
+
+    <div class="ug-nosotros-divisiones__grid">
+      <article class="ug-nosotros-service" *ngFor="let item of divisiones">
+        <div class="ug-nosotros-service__icon">{{ item.icono }}</div>
+        <h3>{{ item.titulo }}</h3>
+        <p>{{ item.texto }}</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===============================
+       VALORES / DIFERENCIADORES
+       =============================== -->
+  <div class="ug-nosotros-values">
+    <div class="ug-nosotros-values__left">
+      <p class="ug-eyebrow">NUESTRO ENFOQUE</p>
+      <h2>UNA EMPRESA CON PROCESO, EXPERIENCIA Y ATENCIÓN DIRECTA</h2>
+      <p>
+        UG Uniformes busca fortalecer su operación mediante organización, calidad
+        en el servicio y soluciones completas para cada cliente.
+      </p>
+    </div>
+
+    <div class="ug-nosotros-values__right">
+      <article class="ug-nosotros-value" *ngFor="let valor of valores">
+        <span>{{ valor.numero }}</span>
+        <div>
+          <h3>{{ valor.titulo }}</h3>
+          <p>{{ valor.texto }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===============================
+       CTA FINAL
+       =============================== -->
+  <div class="ug-nosotros-cta">
+    <p class="ug-eyebrow">COTIZACIONES Y PEDIDOS</p>
+    <h2>¿BUSCAS UNIFORMES PARA TU ESCUELA, EMPRESA O INSTITUCIÓN?</h2>
+    <p>
+      Podemos ayudarte con uniformes, personalización, bordado, serigrafía,
+      sublimado y productos especiales.
+    </p>
+    <a routerLink="/contacto">SOLICITAR INFORMACIÓN</a>
+  </div>
+
+</section>

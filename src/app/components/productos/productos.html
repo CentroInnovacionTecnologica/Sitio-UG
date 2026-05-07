@@ -1,0 +1,128 @@
+<section class="ug-productos-page" id="productos">
+
+  <!-- ===============================
+       LÍNEAS PRINCIPALES
+       =============================== -->
+  <div class="ug-productos-section" id="lineas">
+    <div class="ug-section-head">
+      <p class="ug-eyebrow">LÍNEAS PRINCIPALES</p>
+      <h2>UNIFORMES PARA ESCUELAS, EMPRESAS E INSTITUCIONES</h2>
+      <p>
+        Trabajamos distintas líneas textiles para cubrir necesidades escolares,
+        industriales, empresariales y pedidos especiales.
+      </p>
+    </div>
+
+    <div class="ug-productos-page__grid">
+      <article class="ug-productos-page__card" *ngFor="let linea of lineas">
+        <div class="ug-productos-page__image-wrap">
+          <img [src]="linea.imagen" [alt]="linea.titulo">
+          <span>{{ linea.categoria }}</span>
+        </div>
+
+        <div class="ug-productos-page__body">
+          <h3>{{ linea.titulo }}</h3>
+          <p>{{ linea.texto }}</p>
+
+          <div class="ug-productos-page__tags">
+            <small *ngFor="let tag of linea.tags">{{ tag }}</small>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===============================
+       SERVICIOS DE PERSONALIZACIÓN
+       =============================== -->
+  <div class="ug-productos-services-block">
+    <div class="ug-productos-services-block__intro">
+      <p class="ug-eyebrow">PERSONALIZACIÓN</p>
+      <h2>SERVICIOS ESPECIALIZADOS PARA TU MARCA O INSTITUCIÓN</h2>
+      <p>
+        Además de la confección de uniformes, ofrecemos procesos de personalización
+        que permiten integrar identidad, logotipos, acabados y detalles especiales.
+      </p>
+    </div>
+
+    <div class="ug-productos-page__services">
+      <article class="ug-productos-page__service" *ngFor="let servicio of servicios">
+        <div class="ug-productos-page__service-icon">{{ servicio.icono }}</div>
+        <h3>{{ servicio.titulo }}</h3>
+        <p>{{ servicio.texto }}</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===============================
+       BLOQUE DE CAPACIDADES
+       =============================== -->
+  <div class="ug-productos-capabilities">
+    <div class="ug-productos-capabilities__left">
+      <p class="ug-eyebrow">CAPACIDAD DE SERVICIO</p>
+      <h2>TODO LO QUE NECESITAS EN UN SOLO LUGAR</h2>
+      <p>
+        UG Uniformes integra productos textiles y servicios de personalización para
+        resolver necesidades de vestimenta institucional, escolar, empresarial e industrial.
+      </p>
+    </div>
+
+    <div class="ug-productos-capabilities__right">
+      <div class="ug-productos-capability">
+        <span>01</span>
+        <strong>Producción textil</strong>
+        <p>Uniformes y prendas adaptadas a distintas necesidades institucionales.</p>
+      </div>
+
+      <div class="ug-productos-capability">
+        <span>02</span>
+        <strong>Imagen institucional</strong>
+        <p>Aplicación de identidad visual mediante bordado, serigrafía o sublimado.</p>
+      </div>
+
+      <div class="ug-productos-capability">
+        <span>03</span>
+        <strong>Pedidos especiales</strong>
+        <p>Atención a solicitudes específicas para escuelas, empresas y organizaciones.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================
+       PROCESO DE TRABAJO
+       =============================== -->
+  <div class="ug-productos-process">
+    <div class="ug-section-head">
+      <p class="ug-eyebrow">CÓMO TRABAJAMOS</p>
+      <h2>DE LA IDEA AL UNIFORME FINAL</h2>
+      <p>
+        Un proceso claro ayuda a ordenar tu solicitud y definir el producto o servicio adecuado.
+      </p>
+    </div>
+
+    <div class="ug-productos-process__grid">
+      <article class="ug-productos-process__step" *ngFor="let proceso of procesos">
+        <span>{{ proceso.numero }}</span>
+        <h3>{{ proceso.titulo }}</h3>
+        <p>{{ proceso.texto }}</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===============================
+       CTA FINAL
+       =============================== -->
+  <div class="ug-productos-page__cta">
+    <p class="ug-eyebrow">COTIZACIONES Y PEDIDOS</p>
+
+    <h3>¿NECESITAS COTIZACIÓN O UN PEDIDO ESPECIAL?</h3>
+
+    <p>
+      Solicita información sobre uniformes, bordado, serigrafía, sublimado,
+      corte láser y productos institucionales.
+    </p>
+
+    <a routerLink="/contacto">SOLICITAR INFORMACIÓN</a>
+  </div>
+
+</section>

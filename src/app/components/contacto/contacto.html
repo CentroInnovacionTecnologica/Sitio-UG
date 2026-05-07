@@ -1,0 +1,123 @@
+<section class="ug-contacto-page" id="contacto">
+
+  <!-- ===============================
+       CONTENIDO PRINCIPAL
+       =============================== -->
+  <div class="ug-contacto-page__container">
+
+    <!-- ===============================
+         INFORMACIÓN DE CONTACTO
+         =============================== -->
+    <div class="ug-contacto-page__info">
+      <p class="ug-eyebrow">DATOS DE CONTACTO</p>
+
+      <h2>ATENCIÓN DIRECTA EN DURANGO</h2>
+
+      <p class="ug-contacto-page__desc">
+        Estamos listos para orientarte y ayudarte a definir la mejor opción para
+        uniformes, bordado, serigrafía, sublimado o pedidos especiales.
+      </p>
+
+      <div class="ug-contacto-page__items">
+        <article class="ug-contacto-page__item" *ngFor="let item of contactoItems">
+          <div class="ug-contacto-page__icon">{{ item.icono }}</div>
+
+          <div>
+            <span>{{ item.label }}</span>
+            <p>{{ item.value }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===============================
+         FORMULARIO
+         =============================== -->
+    <div class="ug-contacto-page__form">
+      <div class="ug-contacto-page__form-head">
+        <p class="ug-eyebrow">SOLICITUD</p>
+        <h3>Solicitar cotización</h3>
+        <p>
+          Completa tus datos y describe brevemente lo que necesitas.
+        </p>
+      </div>
+
+      <div class="ug-contacto-page__group">
+        <label>Nombre completo</label>
+        <input type="text" [(ngModel)]="nombre" placeholder="Tu nombre completo">
+      </div>
+
+      <div class="ug-contacto-page__group">
+        <label>Empresa / Institución</label>
+        <input type="text" [(ngModel)]="empresa" placeholder="Nombre de tu empresa o escuela">
+      </div>
+
+      <div class="ug-contacto-page__form-row">
+        <div class="ug-contacto-page__group">
+          <label>Teléfono</label>
+          <input type="tel" [(ngModel)]="telefono" placeholder="Tu número de teléfono">
+        </div>
+
+        <div class="ug-contacto-page__group">
+          <label>Correo electrónico</label>
+          <input type="email" [(ngModel)]="correo" placeholder="Tu correo electrónico">
+        </div>
+      </div>
+
+      <div class="ug-contacto-page__group">
+        <label>Tipo de servicio</label>
+        <select [(ngModel)]="servicio">
+          <option value="">Selecciona una opción</option>
+          <option value="Uniformes escolares">Uniformes escolares</option>
+          <option value="Uniformes industriales">Uniformes industriales</option>
+          <option value="Uniforme empresarial">Uniforme empresarial</option>
+          <option value="Bordado">Bordado</option>
+          <option value="Serigrafía">Serigrafía</option>
+          <option value="Sublimado">Sublimado</option>
+          <option value="Corte láser">Corte láser</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="ug-contacto-page__group">
+        <label>Descripción de tu pedido</label>
+        <textarea [(ngModel)]="mensaje" placeholder="Describe cantidades aproximadas, tipo de uniforme, colores, logo o servicio requerido..."></textarea>
+      </div>
+
+      <button type="button" class="ug-contacto-page__submit" (click)="enviarFormulario()">
+        ENVIAR SOLICITUD
+      </button>
+
+      <div class="ug-contacto-page__success" *ngIf="enviado">
+        ✓ ¡Solicitud enviada con éxito! Te contactaremos pronto.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================
+       PROCESO DE CONTACTO
+       =============================== -->
+  <div class="ug-contacto-process">
+    <div class="ug-contacto-process__head">
+      <p class="ug-eyebrow">CÓMO FUNCIONA</p>
+      <h2>UN PROCESO SIMPLE PARA INICIAR TU PEDIDO</h2>
+    </div>
+
+    <div class="ug-contacto-process__grid">
+      <article class="ug-contacto-process__step" *ngFor="let paso of pasos">
+        <span>{{ paso.numero }}</span>
+        <h3>{{ paso.titulo }}</h3>
+        <p>{{ paso.texto }}</p>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===============================
+       BANDA FINAL
+       =============================== -->
+  <div class="ug-contacto-page__band">
+    <h3>VISÍTANOS EN DURANGO</h3>
+    <p>Calle Pino Suárez No. 2008, Colonia Hipódromo, C.P. 34270.</p>
+  </div>
+
+</section>

@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+
+.ug-app-shell {
+  min-height: 100vh;
+}
