@@ -38,7 +38,7 @@ export class NosotrosComponent {
     },
     {
       icono: '✂️',
-      titulo: 'Corte láser',
+      titulo: 'Corte de Vinil',
       texto: 'Servicio complementario para acabados, procesos textiles y soluciones especiales.'
     }
   ];
@@ -57,7 +57,7 @@ export class NosotrosComponent {
     {
       numero: '03',
       titulo: 'Procesos textiles',
-      texto: 'Integramos confección, bordado, serigrafía, sublimado y corte láser para ofrecer soluciones completas.'
+      texto: 'Integramos confección, bordado, serigrafía, sublimado y corte de vinil para ofrecer soluciones completas.'
     }
   ];
 }

@@ -1,0 +1,273 @@
+<section class="ug-configurator">
+
+  <!-- =========================================
+       HERO
+       ========================================= -->
+  <section class="ug-configurator-hero">
+
+    <div class="ug-configurator-hero__content">
+
+      <p class="ug-eyebrow">CONFIGURA TU PEDIDO</p>
+
+      <h1>
+        CREA TU
+        <span>UNIFORME</span>
+      </h1>
+
+      <p>
+        Diseña una cotización personalizada para escuelas,
+        empresas e instituciones con producción textil,
+        personalización y acabados profesionales.
+      </p>
+
+      <div class="ug-configurator-hero__stats">
+
+        <div class="ug-stat">
+          <strong>25+</strong>
+          <span>AÑOS</span>
+        </div>
+
+        <div class="ug-stat">
+          <strong>100%</strong>
+          <span>PERSONALIZABLE</span>
+        </div>
+
+        <div class="ug-stat">
+          <strong>DGO</strong>
+          <span>ATENCIÓN LOCAL</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ug-configurator-hero__visual">
+
+      <div class="ug-configurator-hero__glow"></div>
+
+      <img
+        src="/hero-uniformes.png"
+        alt="Uniformes">
+
+      <div class="ug-floating-card ug-floating-card--one">
+        <span>✓ Bordado</span>
+      </div>
+
+      <div class="ug-floating-card ug-floating-card--two">
+        <span>✓ Serigrafía</span>
+      </div>
+
+      <div class="ug-floating-card ug-floating-card--three">
+        <span>✓ Sublimado</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================
+       CONTENIDO
+       ========================================= -->
+  <section class="ug-configurator-main">
+
+    <!-- =========================================
+         IZQUIERDA
+         ========================================= -->
+    <div class="ug-configurator-builder">
+
+      <!-- PASO 1 -->
+      <div class="ug-configurator-step">
+
+        <div class="ug-configurator-step__head">
+          <span>01</span>
+
+          <div>
+            <h2>TIPO DE UNIFORME</h2>
+            <p>Selecciona la categoría principal.</p>
+          </div>
+        </div>
+
+        <div class="ug-product-grid">
+
+          <article
+            *ngFor="let item of productos"
+            class="ug-product-card"
+            [class.active]="tipoSeleccionado === item.titulo"
+            (click)="seleccionarTipo(item.titulo)">
+
+            <img [src]="item.imagen" [alt]="item.titulo">
+
+            <div class="ug-product-card__overlay"></div>
+
+            <div class="ug-product-card__content">
+              <small>{{ item.categoria }}</small>
+              <h3>{{ item.titulo }}</h3>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="ug-configurator-step">
+
+        <div class="ug-configurator-step__head">
+          <span>02</span>
+
+          <div>
+            <h2>PERSONALIZACIÓN</h2>
+            <p>Selecciona los servicios adicionales.</p>
+          </div>
+        </div>
+
+        <div class="ug-options-grid">
+
+          <button
+            type="button"
+            *ngFor="let servicio of servicios"
+            [class.active]="serviciosSeleccionados.includes(servicio)"
+            (click)="toggleServicio(servicio)">
+
+            {{ servicio }}
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="ug-configurator-step">
+
+        <div class="ug-configurator-step__head">
+          <span>03</span>
+
+          <div>
+            <h2>CANTIDAD</h2>
+            <p>Selecciona un rango aproximado.</p>
+          </div>
+        </div>
+
+        <div class="ug-options-grid">
+
+          <button
+            type="button"
+            *ngFor="let cantidad of cantidades"
+            [class.active]="cantidadSeleccionada === cantidad"
+            (click)="cantidadSeleccionada = cantidad">
+
+            {{ cantidad }}
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PASO 4 -->
+      <div class="ug-configurator-step">
+
+        <div class="ug-configurator-step__head">
+          <span>04</span>
+
+          <div>
+            <h2>INFORMACIÓN</h2>
+            <p>Déjanos tus datos para enviarte la cotización.</p>
+          </div>
+        </div>
+
+        <div class="ug-form">
+
+          <div class="ug-form__grid">
+
+            <div class="ug-form-group">
+              <label>Nombre completo</label>
+              <input type="text" [(ngModel)]="nombre">
+            </div>
+
+            <div class="ug-form-group">
+              <label>Empresa / Institución</label>
+              <input type="text" [(ngModel)]="empresa">
+            </div>
+
+            <div class="ug-form-group">
+              <label>Teléfono</label>
+              <input type="tel" [(ngModel)]="telefono">
+            </div>
+
+            <div class="ug-form-group">
+              <label>Correo electrónico</label>
+              <input type="email" [(ngModel)]="correo">
+            </div>
+
+          </div>
+
+          <div class="ug-form-group">
+            <label>Detalles del pedido</label>
+
+            <textarea
+              [(ngModel)]="mensaje"
+              placeholder="Colores, tallas, logos, ideas o especificaciones">
+            </textarea>
+          </div>
+
+          <button class="ug-submit-btn">
+            ENVIAR SOLICITUD
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- =========================================
+         SIDEBAR
+         ========================================= -->
+    <aside class="ug-summary">
+
+      <div class="ug-summary__card">
+
+        <p class="ug-eyebrow">TU CONFIGURACIÓN</p>
+
+        <h3>RESUMEN</h3>
+
+        <div class="ug-summary__items">
+
+          <div class="ug-summary__item">
+            <span>Tipo</span>
+            <strong>{{ tipoSeleccionado || 'Sin seleccionar' }}</strong>
+          </div>
+
+          <div class="ug-summary__item">
+            <span>Servicios</span>
+
+            <strong *ngIf="serviciosSeleccionados.length">
+              {{ serviciosSeleccionados.join(', ') }}
+            </strong>
+
+            <strong *ngIf="!serviciosSeleccionados.length">
+              Sin seleccionar
+            </strong>
+          </div>
+
+          <div class="ug-summary__item">
+            <span>Cantidad</span>
+            <strong>{{ cantidadSeleccionada || 'Sin seleccionar' }}</strong>
+          </div>
+
+        </div>
+
+        <button class="ug-summary__button">
+          CONTINUAR
+        </button>
+
+      </div>
+
+    </aside>
+
+  </section>
+
+</section>

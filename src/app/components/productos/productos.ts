@@ -2,15 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-interface LineaProducto {
-  imagen: string;
-  categoria: string;
-  titulo: string;
-  texto: string;
-  tags: string[];
-}
-
 interface Servicio {
+   id: string;
   icono: string;
   titulo: string;
   texto: string;
@@ -30,52 +23,49 @@ interface Proceso {
   styleUrl: './productos.css'
 })
 export class ProductosComponent {
-  lineas: LineaProducto[] = [
-    {
-      imagen: '/escolares.jpg',
-      categoria: 'Línea escolar',
-      titulo: 'Uniformes escolares',
-      texto: 'Confección de uniformes para instituciones educativas, generaciones y proyectos escolares con identidad visual.',
-      tags: ['Preescolar', 'Primaria', 'Secundaria', 'Preparatoria']
-    },
-    {
-      imagen: '/industriales.jpg',
-      categoria: 'Línea industrial',
-      titulo: 'Uniformes industriales',
-      texto: 'Prendas para trabajo, operación y uso institucional con enfoque funcional para empresas y organizaciones.',
-      tags: ['Trabajo', 'Operación', 'Industria', 'Empresas']
-    },
-    {
-      imagen: '/corporativos.jpg',
-      categoria: 'Línea empresarial',
-      titulo: 'Uniforme empresarial',
-      texto: 'Presentación profesional para empresas, instituciones, negocios y pedidos especiales con personalización.',
-      tags: ['Institucional', 'Corporativo', 'Imagen', 'Personalizado']
-    }
-  ];
-
   servicios: Servicio[] = [
-    {
-      icono: '🧵',
-      titulo: 'Bordado',
-      texto: 'Digitalización, punchado de logotipos, bordado directo, letras y maquila para prendas y accesorios.'
-    },
-    {
-      icono: '🖨️',
-      titulo: 'Serigrafía',
-      texto: 'Aplicación en gorras, prendas armadas, banderines, promocionales y materiales personalizados.'
-    },
-    {
-      icono: '☕',
-      titulo: 'Sublimado',
-      texto: 'Personalización de gorras, termos, tazas, vasos, prendas y trabajos en gran formato.'
-    },
-    {
-      icono: '✂️',
-      titulo: 'Corte láser',
-      texto: 'Apoyo en procesos textiles, acabados, cortes especiales y soluciones complementarias.'
-    }
-  ];
+  {
+    id: 'ropa',
+    icono: '👕',
+    titulo: 'Ropa',
+    texto: 'Uniformes escolares, industriales, empresariales, hospitalarios y prendas confeccionadas con altos estándares de calidad.'
+  },
+
+  {
+    id: 'accesorios',
+    icono: '🎒',
+    titulo: 'Accesorios',
+    texto: 'Complementos personalizados como gorras, mochilas, termos, bandas, cojines y artículos promocionales.'
+  },
+
+  {
+    id: 'bordado',
+    icono: '🧵',
+    titulo: 'Bordado',
+    texto: 'Digitalización, punchado de logotipos, bordado directo, letras y maquila para prendas y accesorios.'
+  },
+
+  {
+    id: 'serigrafia',
+    icono: '🖨️',
+    titulo: 'Serigrafía',
+    texto: 'Aplicación en gorras, prendas armadas, banderines, promocionales y materiales personalizados.'
+  },
+
+  {
+    id: 'sublimado',
+    icono: '☕',
+    titulo: 'Sublimado',
+    texto: 'Personalización de gorras, termos, tazas, vasos, prendas y trabajos en gran formato.'
+  },
+
+  {
+    id: 'vinil',
+    icono: '✂️',
+    titulo: 'Corte de Vinil',
+    texto: 'Apoyo en procesos textiles, acabados, cortes especiales y soluciones complementarias.'
+  }
+];
 
   categorias = [
     'Uniformes escolares',
@@ -86,7 +76,7 @@ export class ProductosComponent {
     'Bordado',
     'Serigrafía',
     'Sublimado',
-    'Corte láser'
+    'Corte de Vinil'
   ];
 
   procesos: Proceso[] = [

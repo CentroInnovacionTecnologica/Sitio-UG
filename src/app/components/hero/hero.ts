@@ -19,7 +19,7 @@ export class HeroComponent {
     {
       numero: '02',
       titulo: 'Personalización profesional',
-      texto: 'Bordado, serigrafía, sublimado, corte láser y acabados especiales.'
+      texto: 'Bordado, serigrafía, sublimado, corte de vinil y acabados especiales.'
     },
     {
       numero: '03',
@@ -35,7 +35,7 @@ export class HeroComponent {
     'Bordado',
     'Serigrafía',
     'Sublimado',
-    'Corte láser',
+    'Corte de Vinil',
     'Accesorios'
   ];
 }

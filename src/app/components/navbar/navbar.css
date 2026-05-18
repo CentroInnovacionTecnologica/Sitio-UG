@@ -190,3 +190,93 @@
     font-size: 1.6rem;
   }
 }
+
+/* =========================================
+   DROPDOWN PRODUCTOS
+========================================= */
+
+.ug-navbar__dropdown {
+  position: relative;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.ug-navbar__dropdown-menu {
+  position: absolute;
+
+  top: 170%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 320px;
+
+  padding: 24px;
+
+  border-radius: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(15, 23, 42, 0.06);
+
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.28s ease;
+
+  z-index: 999;
+}
+
+/* =========================
+   SHOW
+========================= */
+
+.ug-navbar__dropdown:hover
+.ug-navbar__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+  top: 150%;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.ug-navbar__dropdown-menu a {
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  color: #111827;
+
+  text-decoration: none;
+
+  font-family: 'Barlow', sans-serif;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.ug-navbar__dropdown-menu a:hover {
+  background: rgba(184, 20, 48, 0.06);
+
+  color: #b81430;
+
+  transform: translateX(4px);
+}

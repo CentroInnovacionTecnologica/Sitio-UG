@@ -6,7 +6,7 @@
          =============================== -->
     <a routerLink="/" class="ug-navbar__logo" (click)="closeMenu()">
       <span class="ug-navbar__logo-mark">UG</span>
-      <span class="ug-navbar__logo-text">UNIFORMES GRACIELA</span>
+      <span class="ug-navbar__logo-text">UNIFORMES ESCOLARES E INDUSTRIALES</span>
     </a>
 
     <!-- ===============================
@@ -30,13 +30,45 @@
         NOSOTROS
       </a>
 
-      <a
-        routerLink="/productos"
-        routerLinkActive="ug-navbar__link--active"
-        class="ug-navbar__link"
-      >
-        PRODUCTOS
-      </a> 
+      <div class="ug-navbar__dropdown">
+
+  <a
+    routerLink="/productos"
+    routerLinkActive="ug-navbar__link--active"
+    class="ug-navbar__link"
+  >
+    PRODUCTOS
+  </a>
+
+  <div class="ug-navbar__dropdown-menu">
+
+    <a href="#ropa">
+      ROPA
+    </a>
+
+    <a href="#accesorios">
+      ACCESORIOS
+    </a>
+
+    <a href="#serigrafia">
+      SERIGRAFÍA
+    </a>
+
+    <a href="#bordado">
+      BORDADO
+    </a>
+
+    <a href="#sublimado">
+      SUBLIMADO
+    </a>
+
+    <a href="#vinil">
+      CORTE DE VINIL
+    </a>
+
+  </div>
+
+</div>
 
       <a
         routerLink="/contacto"
@@ -46,7 +78,7 @@
         CONTACTO
       </a>
 
-      <a routerLink="/contacto" class="ug-navbar__cta">
+      <a routerLink="/cotizar" class="ug-navbar__cta">
         COTIZAR
       </a>
     </nav>
