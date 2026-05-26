@@ -102,11 +102,18 @@
 
 .ug-home-hero__title {
   margin: 22px 0 0;
+
   color: #111827;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(5rem, 10.7vw, 9.8rem);
-  line-height: 0.86;
-  letter-spacing: 2px;
+
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 900;
+
+  font-size: clamp(5rem, 10vw, 9rem);
+
+  line-height: 0.9;
+  letter-spacing: -4px;
+
+  text-transform: uppercase;
 }
 
 .ug-home-hero__title span {
