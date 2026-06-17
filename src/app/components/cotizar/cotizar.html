@@ -1,271 +1,250 @@
-<section class="ug-configurator">
+<section class="ug-cotizar">
 
-  <!-- =========================================
-       HERO
-       ========================================= -->
-  <section class="ug-configurator-hero">
+  <!-- INTRO -->
+  <header class="ug-cotizar__intro">
+    <p class="ug-eyebrow">CONFIGURA TU PEDIDO</p>
+    <h1>CREA TU <span>UNIFORME</span></h1>
+    <p>Cuatro pasos rápidos. Te guiamos en cada uno y armamos tu cotización al final.</p>
+  </header>
 
-    <div class="ug-configurator-hero__content">
+  <!-- STEPPER -->
+  <nav class="ug-stepper" aria-label="Progreso de la cotización">
+    <ng-container *ngFor="let p of pasos; let last = last">
 
-      <p class="ug-eyebrow">CONFIGURA TU PEDIDO</p>
-
-      <h1>
-        CREA TU
-        <span>UNIFORME</span>
-      </h1>
-
-      <p>
-        Diseña una cotización personalizada para escuelas,
-        empresas e instituciones con producción textil,
-        personalización y acabados profesionales.
-      </p>
-
-      <div class="ug-configurator-hero__stats">
-
-        <div class="ug-stat">
-          <strong>25+</strong>
-          <span>AÑOS</span>
+      <div class="ug-step-node" [ngClass]="estadoPaso(p.num)">
+        <div class="ug-step-circle">
+          <svg *ngIf="p.num < pasoActual" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span *ngIf="p.num >= pasoActual">{{ p.num }}</span>
         </div>
-
-        <div class="ug-stat">
-          <strong>100%</strong>
-          <span>PERSONALIZABLE</span>
-        </div>
-
-        <div class="ug-stat">
-          <strong>DGO</strong>
-          <span>ATENCIÓN LOCAL</span>
-        </div>
-
+        <span class="ug-step-label">{{ p.label }}</span>
       </div>
 
-    </div>
+      <div class="ug-step-line" [class.fill]="p.num < pasoActual" *ngIf="!last"></div>
 
-    <div class="ug-configurator-hero__visual">
+    </ng-container>
+  </nav>
 
-      <div class="ug-configurator-hero__glow"></div>
+  <!-- MAIN -->
+  <section class="ug-cotizar__main">
 
-      <img
-        src="/hero-uniformes.png"
-        alt="Uniformes">
+    <!-- BUILDER -->
+    <div class="ug-builder">
 
-      <div class="ug-floating-card ug-floating-card--one">
-        <span>✓ Bordado</span>
-      </div>
+      <div class="ug-builder__body">
 
-      <div class="ug-floating-card ug-floating-card--two">
-        <span>✓ Serigrafía</span>
-      </div>
-
-      <div class="ug-floating-card ug-floating-card--three">
-        <span>✓ Sublimado</span>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================================
-       CONTENIDO
-       ========================================= -->
-  <section class="ug-configurator-main">
-
-    <!-- =========================================
-         IZQUIERDA
-         ========================================= -->
-    <div class="ug-configurator-builder">
-
-      <!-- PASO 1 -->
-      <div class="ug-configurator-step">
-
-        <div class="ug-configurator-step__head">
-          <span>01</span>
-
-          <div>
-            <h2>TIPO DE UNIFORME</h2>
-            <p>Selecciona la categoría principal.</p>
-          </div>
-        </div>
-
-        <div class="ug-product-grid">
-
-          <article
-            *ngFor="let item of productos"
-            class="ug-product-card"
-            [class.active]="tipoSeleccionado === item.titulo"
-            (click)="seleccionarTipo(item.titulo)">
-
-            <img [src]="item.imagen" [alt]="item.titulo">
-
-            <div class="ug-product-card__overlay"></div>
-
-            <div class="ug-product-card__content">
-              <small>{{ item.categoria }}</small>
-              <h3>{{ item.titulo }}</h3>
+        <!-- PASO 1 -->
+        <!-- PASO 1 -->
+        <div class="ug-step" *ngIf="pasoActual === 1">
+          <div class="ug-step__head">
+            <span>01</span>
+            <div>
+              <h2>TIPO DE UNIFORME</h2>
+              <p>Selecciona la categoría principal.</p>
             </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-      <!-- PASO 2 -->
-      <div class="ug-configurator-step">
-
-        <div class="ug-configurator-step__head">
-          <span>02</span>
-
-          <div>
-            <h2>PERSONALIZACIÓN</h2>
-            <p>Selecciona los servicios adicionales.</p>
           </div>
-        </div>
 
-        <div class="ug-options-grid">
+          <div class="ug-type-grid">
+            <button type="button" *ngFor="let item of productos" class="ug-type-card"
+              [class.active]="tipoSeleccionado === item.titulo" (click)="seleccionarTipo(item.titulo)">
 
-          <button
-            type="button"
-            *ngFor="let servicio of servicios"
-            [class.active]="serviciosSeleccionados.includes(servicio)"
-            (click)="toggleServicio(servicio)">
+              <span class="ug-type-card__check" *ngIf="tipoSeleccionado === item.titulo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
 
-            {{ servicio }}
+              <span class="ug-type-card__icon" [ngSwitch]="item.icono">
+                <svg *ngSwitchCase="'escolar'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5" />
+                </svg>
+                <svg *ngSwitchCase="'industrial'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+                <svg *ngSwitchCase="'corporativo'" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18" />
+                  <path d="M5 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16" />
+                  <path d="M15 21V9h3a1 1 0 0 1 1 1v11" />
+                  <line x1="8" y1="8" x2="11" y2="8" />
+                  <line x1="8" y1="12" x2="11" y2="12" />
+                  <line x1="8" y1="16" x2="11" y2="16" />
+                </svg>
+              </span>
 
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- PASO 3 -->
-      <div class="ug-configurator-step">
-
-        <div class="ug-configurator-step__head">
-          <span>03</span>
-
-          <div>
-            <h2>CANTIDAD</h2>
-            <p>Selecciona un rango aproximado.</p>
+              <span class="ug-type-card__title">{{ item.titulo }}</span>
+              <span class="ug-type-card__cat">{{ item.categoria }}</span>
+            </button>
           </div>
+
+          <p class="ug-hint" [class.error]="!!error">
+            {{ error || 'Elige una opción para continuar.' }}
+          </p>
         </div>
 
-        <div class="ug-options-grid">
-
-          <button
-            type="button"
-            *ngFor="let cantidad of cantidades"
-            [class.active]="cantidadSeleccionada === cantidad"
-            (click)="cantidadSeleccionada = cantidad">
-
-            {{ cantidad }}
-
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- PASO 4 -->
-      <div class="ug-configurator-step">
-
-        <div class="ug-configurator-step__head">
-          <span>04</span>
-
-          <div>
-            <h2>INFORMACIÓN</h2>
-            <p>Déjanos tus datos para enviarte la cotización.</p>
+        <!-- PASO 2 -->
+        <div class="ug-step" *ngIf="pasoActual === 2">
+          <div class="ug-step__head">
+            <span>02</span>
+            <div>
+              <h2>PERSONALIZACIÓN</h2>
+              <p>Selecciona los servicios adicionales (opcional).</p>
+            </div>
           </div>
+
+          <div class="ug-options-grid">
+            <button type="button" *ngFor="let servicio of servicios"
+              [class.active]="serviciosSeleccionados.includes(servicio)" (click)="toggleServicio(servicio)">
+              {{ servicio }}
+            </button>
+          </div>
+
+          <p class="ug-hint">Toca los servicios que necesites. Puedes elegir varios.</p>
         </div>
 
-        <div class="ug-form">
+        <!-- PASO 3 -->
+        <div class="ug-step" *ngIf="pasoActual === 3">
+          <div class="ug-step__head">
+            <span>03</span>
+            <div>
+              <h2>CANTIDAD</h2>
+              <p>Selecciona un rango aproximado.</p>
+            </div>
+          </div>
 
-          <div class="ug-form__grid">
+          <div class="ug-qty-grid">
+            <div *ngFor="let c of cantidades" class="ug-qty-option" [class.active]="cantidadSeleccionada === c.valor"
+              (click)="seleccionarCantidad(c.valor)">
 
-            <div class="ug-form-group">
-              <label>Nombre completo</label>
-              <input type="text" [(ngModel)]="nombre">
+              <div>
+                <strong>{{ c.rango }}</strong>
+                <small>{{ c.label }}</small>
+              </div>
+              <span class="ug-qty-radio"></span>
+            </div>
+          </div>
+
+          <p class="ug-hint" [class.error]="!!error">
+            {{ error || 'El rango nos ayuda a darte un mejor precio.' }}
+          </p>
+        </div>
+
+        <!-- PASO 4 -->
+        <div class="ug-step" *ngIf="pasoActual === 4">
+          <div class="ug-step__head">
+            <span>04</span>
+            <div>
+              <h2>INFORMACIÓN</h2>
+              <p>Déjanos tus datos para enviarte la cotización.</p>
+            </div>
+          </div>
+
+          <div class="ug-form">
+            <div class="ug-form__grid">
+              <div class="ug-form-group">
+                <label>Nombre completo</label>
+                <input type="text" [(ngModel)]="nombre" placeholder="Ej. Mario Rosales">
+              </div>
+              <div class="ug-form-group">
+                <label>Empresa / Institución</label>
+                <input type="text" [(ngModel)]="empresa" placeholder="Opcional">
+              </div>
+              <div class="ug-form-group">
+                <label>Teléfono</label>
+                <input type="tel" [(ngModel)]="telefono" placeholder="618 ...">
+              </div>
+              <div class="ug-form-group">
+                <label>Correo electrónico</label>
+                <input type="email" [(ngModel)]="correo" placeholder="tu@correo.com">
+              </div>
             </div>
 
             <div class="ug-form-group">
-              <label>Empresa / Institución</label>
-              <input type="text" [(ngModel)]="empresa">
+              <label>Detalles del pedido</label>
+              <textarea [(ngModel)]="mensaje" placeholder="Colores, tallas, logos, ideas o especificaciones"></textarea>
             </div>
-
-            <div class="ug-form-group">
-              <label>Teléfono</label>
-              <input type="tel" [(ngModel)]="telefono">
-            </div>
-
-            <div class="ug-form-group">
-              <label>Correo electrónico</label>
-              <input type="email" [(ngModel)]="correo">
-            </div>
-
           </div>
+        </div>
 
-          <div class="ug-form-group">
-            <label>Detalles del pedido</label>
+      </div>
 
-            <textarea
-              [(ngModel)]="mensaje"
-              placeholder="Colores, tallas, logos, ideas o especificaciones">
-            </textarea>
-          </div>
+      <!-- NAVEGACIÓN -->
+      <div class="ug-builder__footer">
+        <button type="button" class="ug-btn-back" *ngIf="pasoActual > 1" (click)="retroceder()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          ATRÁS
+        </button>
 
-          <button class="ug-submit-btn">
+        <button type="button" class="ug-btn-next" (click)="avanzar()">
+          <ng-container *ngIf="pasoActual < totalPasos">
+            CONTINUAR
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </ng-container>
+          <ng-container *ngIf="pasoActual === totalPasos">
             ENVIAR SOLICITUD
-          </button>
-
-        </div>
-
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </ng-container>
+        </button>
       </div>
 
     </div>
 
-    <!-- =========================================
-         SIDEBAR
-         ========================================= -->
+    <!-- SUMMARY -->
     <aside class="ug-summary">
-
       <div class="ug-summary__card">
-
         <p class="ug-eyebrow">TU CONFIGURACIÓN</p>
-
         <h3>RESUMEN</h3>
 
         <div class="ug-summary__items">
-
           <div class="ug-summary__item">
             <span>Tipo</span>
-            <strong>{{ tipoSeleccionado || 'Sin seleccionar' }}</strong>
+            <strong [class.empty]="!tipoSeleccionado">
+              {{ tipoSeleccionado || 'Sin seleccionar' }}
+            </strong>
           </div>
-
           <div class="ug-summary__item">
             <span>Servicios</span>
-
-            <strong *ngIf="serviciosSeleccionados.length">
-              {{ serviciosSeleccionados.join(', ') }}
-            </strong>
-
-            <strong *ngIf="!serviciosSeleccionados.length">
-              Sin seleccionar
+            <strong [class.empty]="!serviciosSeleccionados.length">
+              {{ serviciosSeleccionados.length ? serviciosSeleccionados.join(', ') : 'Sin seleccionar' }}
             </strong>
           </div>
-
           <div class="ug-summary__item">
             <span>Cantidad</span>
-            <strong>{{ cantidadSeleccionada || 'Sin seleccionar' }}</strong>
+            <strong [class.empty]="!cantidadSeleccionada">
+              {{ cantidadSeleccionada || 'Sin seleccionar' }}
+            </strong>
           </div>
-
         </div>
 
-        <button class="ug-summary__button">
-          CONTINUAR
-        </button>
-
+        <div class="ug-progress">
+          <div class="ug-progress__top">
+            <span>PROGRESO</span>
+            <span>{{ progreso }}%</span>
+          </div>
+          <div class="ug-progress__track">
+            <div class="ug-progress__fill" [style.width.%]="progreso"></div>
+          </div>
+        </div>
       </div>
-
     </aside>
 
   </section>
