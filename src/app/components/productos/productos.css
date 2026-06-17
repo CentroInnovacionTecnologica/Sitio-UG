@@ -151,15 +151,10 @@
   transform: scaleX(1);
 }
 
-.ug-productos-page__service-icon {
-  width: 62px;
-  height: 62px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(184, 20, 48, 0.08);
-  font-size: 1.7rem;
+.ug-productos-page__service-icon svg {
+  width: 26px;
+  height: 26px;
+  color: #b81430;
 }
 
 .ug-productos-page__service h3 {

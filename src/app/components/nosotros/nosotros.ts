@@ -12,32 +12,32 @@ import { RouterLink } from '@angular/router';
 export class NosotrosComponent {
   divisiones = [
     {
-      icono: '🧥',
+      icono: 'ropa',
       titulo: 'Ropa',
       texto: 'Uniformes escolares, industriales, hospitalaria, hotelería, blancos y uniforme empresarial e institucional.'
     },
     {
-      icono: '🎒',
+      icono: 'accesorios',
       titulo: 'Accesorios',
       texto: 'Pantuflas, cojines, cintos, birretes, cubre-trajes y piezas complementarias.'
     },
     {
-      icono: '🧵',
+      icono: 'bordado',
       titulo: 'Bordado',
       texto: 'Digitalización, punchado de logotipos y letras, bordado directo y capacidad de maquila.'
     },
     {
-      icono: '🖨️',
+      icono: 'serigrafia',
       titulo: 'Serigrafía',
       texto: 'Aplicación en gorras, prenda armada, banderines, promocionales y materiales personalizados.'
     },
     {
-      icono: '☕',
+      icono: 'sublimado',
       titulo: 'Sublimado',
       texto: 'Gorras, prenda armada, termos, tazas, vasos y maquila en gran formato.'
     },
     {
-      icono: '✂️',
+      icono: 'vinil',
       titulo: 'Corte de Vinil',
       texto: 'Servicio complementario para acabados, procesos textiles y soluciones especiales.'
     }

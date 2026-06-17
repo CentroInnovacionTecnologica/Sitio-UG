@@ -10,11 +10,11 @@
 
   background:
     linear-gradient(180deg,
-    #040404 0%,
-    #090909 100%);
+      #040404 0%,
+      #090909 100%);
 
   border-top:
-    1px solid rgba(184,20,48,0.2);
+    1px solid rgba(184, 20, 48, 0.2);
 
   color: #fff;
 }
@@ -38,7 +38,7 @@
   height: 420px;
 
   background:
-    rgba(184,20,48,0.18);
+    rgba(184, 20, 48, 0.18);
 }
 
 .ug-footer__glow--two {
@@ -49,7 +49,7 @@
   height: 500px;
 
   background:
-    rgba(184,20,48,0.14);
+    rgba(184, 20, 48, 0.14);
 }
 
 /* ===================================
@@ -121,10 +121,10 @@
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.04);
+    rgba(255, 255, 255, 0.04);
 
   border:
-    1px solid rgba(255,255,255,0.08);
+    1px solid rgba(255, 255, 255, 0.08);
 
   color: #fff;
 
@@ -163,11 +163,11 @@
 
   background:
     linear-gradient(180deg,
-    rgba(255,255,255,0.04),
-    rgba(255,255,255,0.015));
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.015));
 
   border:
-    1px solid rgba(255,255,255,0.06);
+    1px solid rgba(255, 255, 255, 0.06);
 
   backdrop-filter: blur(16px);
 
@@ -178,10 +178,10 @@
   transform: translateY(-8px);
 
   border-color:
-    rgba(184,20,48,0.24);
+    rgba(184, 20, 48, 0.24);
 
   box-shadow:
-    0 30px 70px rgba(184,20,48,0.12);
+    0 30px 70px rgba(184, 20, 48, 0.12);
 }
 
 .ug-footer__card h3 {
@@ -214,7 +214,7 @@
   border-radius: 18px;
 
   background:
-    rgba(255,255,255,0.03);
+    rgba(255, 255, 255, 0.03);
 
   text-decoration: none;
 
@@ -225,7 +225,7 @@
   transform: translateX(6px);
 
   background:
-    rgba(184,20,48,0.12);
+    rgba(184, 20, 48, 0.12);
 }
 
 .ug-footer__social-icon {
@@ -239,11 +239,21 @@
   justify-content: center;
 
   background:
-    rgba(255,255,255,0.06);
+    rgba(255, 255, 255, 0.06);
 }
 
-.ug-footer__social-icon img {
+.ug-footer__social-icon svg {
   width: 26px;
+  height: 26px;
+  color: #fff;            /* color del trazo (currentColor) */
+}
+
+.ug-footer__socials a:hover .ug-footer__social-icon {
+  background: rgba(184, 20, 48, 0.18);
+}
+
+.ug-footer__socials a:hover .ug-footer__social-icon svg {
+  color: #fff;
 }
 
 .ug-footer__socials strong {
@@ -287,6 +297,26 @@
   transform: translateX(5px);
 }
 
+.ug-footer__contact-list a,
+.ug-footer__contact-list p {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.ug-footer__icon {
+  flex-shrink: 0;
+}
+
+/* opcional: que el pin de dirección se alinee arriba si el texto va en varias líneas */
+.ug-footer__contact-list p {
+  align-items: flex-start;
+}
+
+.ug-footer__contact-list p .ug-footer__icon {
+  margin-top: 2px;
+}
+
 /* ===================================
    MAPA
 =================================== */
@@ -297,7 +327,7 @@
   border-radius: 26px;
 
   border:
-    1px solid rgba(255,255,255,0.08);
+    1px solid rgba(255, 255, 255, 0.08);
 }
 
 .ug-footer__map-wrap iframe {
@@ -326,7 +356,7 @@
   text-align: center;
 
   border-top:
-    1px solid rgba(255,255,255,0.06);
+    1px solid rgba(255, 255, 255, 0.06);
 
   color: #6b7280;
 }

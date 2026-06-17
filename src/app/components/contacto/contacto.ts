@@ -20,22 +20,22 @@ export class ContactoComponent {
 
   contactoItems = [
     {
-      icono: '📍',
+      tipo: 'domicilio',
       label: 'Domicilio',
       value: 'Calle Pino Suárez No. 2008, Col. Hipódromo, C.P. 34270'
     },
     {
-      icono: '📞',
+      tipo: 'telefono',
       label: 'Teléfono',
       value: '(618) 8181355'
     },
     {
-      icono: '📧',
+      tipo: 'correo',
       label: 'Correo electrónico',
       value: 'hectorguerrero67@hotmail.com'
     },
     {
-      icono: '🧾',
+      tipo: 'rfc',
       label: 'RFC',
       value: 'GUOH 670109 K14'
     }

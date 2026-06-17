@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 interface Servicio {
-   id: string;
-  icono: string;
+  id: string;
   titulo: string;
   texto: string;
 }
@@ -24,48 +23,37 @@ interface Proceso {
 })
 export class ProductosComponent {
   servicios: Servicio[] = [
-  {
-    id: 'ropa',
-    icono: '👕',
-    titulo: 'Ropa',
-    texto: 'Uniformes escolares, industriales, empresariales, hospitalarios y prendas confeccionadas con altos estándares de calidad.'
-  },
-
-  {
-    id: 'accesorios',
-    icono: '🎒',
-    titulo: 'Accesorios',
-    texto: 'Complementos personalizados como gorras, mochilas, termos, bandas, cojines y artículos promocionales.'
-  },
-
-  {
-    id: 'bordado',
-    icono: '🧵',
-    titulo: 'Bordado',
-    texto: 'Digitalización, punchado de logotipos, bordado directo, letras y maquila para prendas y accesorios.'
-  },
-
-  {
-    id: 'serigrafia',
-    icono: '🖨️',
-    titulo: 'Serigrafía',
-    texto: 'Aplicación en gorras, prendas armadas, banderines, promocionales y materiales personalizados.'
-  },
-
-  {
-    id: 'sublimado',
-    icono: '☕',
-    titulo: 'Sublimado',
-    texto: 'Personalización de gorras, termos, tazas, vasos, prendas y trabajos en gran formato.'
-  },
-
-  {
-    id: 'vinil',
-    icono: '✂️',
-    titulo: 'Corte de Vinil',
-    texto: 'Apoyo en procesos textiles, acabados, cortes especiales y soluciones complementarias.'
-  }
-];
+    {
+      id: 'ropa',
+      titulo: 'Ropa',
+      texto: 'Uniformes escolares, industriales, empresariales, hospitalarios y prendas confeccionadas con altos estándares de calidad.'
+    },
+    {
+      id: 'accesorios',
+      titulo: 'Accesorios',
+      texto: 'Complementos personalizados como gorras, mochilas, termos, bandas, cojines y artículos promocionales.'
+    },
+    {
+      id: 'bordado',
+      titulo: 'Bordado',
+      texto: 'Digitalización, punchado de logotipos, bordado directo, letras y maquila para prendas y accesorios.'
+    },
+    {
+      id: 'serigrafia',
+      titulo: 'Serigrafía',
+      texto: 'Aplicación en gorras, prendas armadas, banderines, promocionales y materiales personalizados.'
+    },
+    {
+      id: 'sublimado',
+      titulo: 'Sublimado',
+      texto: 'Personalización de gorras, termos, tazas, vasos, prendas y trabajos en gran formato.'
+    },
+    {
+      id: 'vinil',
+      titulo: 'Corte de Vinil',
+      texto: 'Apoyo en procesos textiles, acabados, cortes especiales y soluciones complementarias.'
+    }
+  ];
 
   categorias = [
     'Uniformes escolares',
