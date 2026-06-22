@@ -13,68 +13,32 @@
          MENÚ DESKTOP
          =============================== -->
     <nav class="ug-navbar__desktop">
-      <a
-        routerLink="/"
-        routerLinkActive="ug-navbar__link--active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="ug-navbar__link"
-      >
+      <a routerLink="/" routerLinkActive="ug-navbar__link--active" [routerLinkActiveOptions]="{ exact: true }"
+        class="ug-navbar__link">
         INICIO
       </a>
 
-      <a
-        routerLink="/nosotros"
-        routerLinkActive="ug-navbar__link--active"
-        class="ug-navbar__link"
-      >
+      <a routerLink="/nosotros" routerLinkActive="ug-navbar__link--active" class="ug-navbar__link">
         NOSOTROS
       </a>
 
       <div class="ug-navbar__dropdown">
 
-  <a
-    routerLink="/productos"
-    routerLinkActive="ug-navbar__link--active"
-    class="ug-navbar__link"
-  >
-    PRODUCTOS
-  </a>
+        <a routerLink="/productos" routerLinkActive="ug-navbar__link--active" class="ug-navbar__link">
+          PRODUCTOS
+        </a>
 
-  <div class="ug-navbar__dropdown-menu">
+        <div class="ug-navbar__dropdown-menu">
+          @for (cat of categorias; track cat.slug) {
+          <a [routerLink]="['/productos', cat.slug]" (click)="closeMenu()">
+            {{ cat.nombre }}
+          </a>
+          }
+        </div>
 
-    <a href="#ropa">
-      ROPA
-    </a>
+      </div>
 
-    <a href="#accesorios">
-      ACCESORIOS
-    </a>
-
-    <a href="#serigrafia">
-      SERIGRAFÍA
-    </a>
-
-    <a href="#bordado">
-      BORDADO
-    </a>
-
-    <a href="#sublimado">
-      SUBLIMADO
-    </a>
-
-    <a href="#vinil">
-      CORTE DE VINIL
-    </a>
-
-  </div>
-
-</div>
-
-      <a
-        routerLink="/contacto"
-        routerLinkActive="ug-navbar__link--active"
-        class="ug-navbar__link"
-      >
+      <a routerLink="/contacto" routerLinkActive="ug-navbar__link--active" class="ug-navbar__link">
         CONTACTO
       </a>
 

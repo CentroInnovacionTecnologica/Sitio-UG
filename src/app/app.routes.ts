@@ -19,7 +19,8 @@ export const routes: Routes = [
 
   {
     path: 'productos',
-    component: ProductosComponent
+    loadChildren: () =>
+      import('./components/productos/productos.routes').then((m) => m.PRODUCTOS_ROUTES),
   },
 
   {

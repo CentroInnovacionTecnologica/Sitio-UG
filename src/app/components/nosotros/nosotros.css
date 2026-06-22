@@ -239,6 +239,11 @@
   border: 1px solid rgba(17, 24, 39, 0.08);
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
   transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .ug-nosotros-service::before {
@@ -279,6 +284,25 @@
   margin: 12px 0 0;
   color: #5f6b7a;
   line-height: 1.8;
+}
+
+.ug-nosotros-service-cta {
+  display: inline-block;
+  margin-top: auto;  
+  padding-top: 16px;
+  color: #b81430;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.35s ease;
+}
+
+.ug-nosotros-service:hover .ug-nosotros-service-cta {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ===============================

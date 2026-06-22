@@ -1,0 +1,102 @@
+<!-- productos/categoria/categoria.html -->
+@if (categoria(); as cat) {
+<section class="ug-categoria-page" [style.--acento]="cat.color">
+
+    <!-- ENCABEZADO -->
+    <header class="ug-categoria-head">
+        <p class="ug-eyebrow">PRODUCTOS · {{ cat.nombre | uppercase }}</p>
+        <h1>{{ cat.nombre }}</h1>
+        <p class="ug-categoria-head__desc">{{ cat.descripcion }}</p>
+    </header>
+
+    <!-- ÍNDICE DE ANCLAS -->
+    @if (cat.subcategorias.length) {
+    <nav class="ug-categoria-index">
+        @for (sub of cat.subcategorias; track sub.slug) {
+        <button type="button" class="ug-categoria-index__chip" (click)="irA(sub.slug)">
+            {{ sub.nombre }}
+        </button>
+        }
+    </nav>
+    }
+
+    <!-- SECCIONES POR SUBCATEGORÍA -->
+    <div class="ug-categoria-sections">
+        @for (sub of cat.subcategorias; track sub.slug; let i = $index) {
+        <section class="ug-subcat" [id]="'sub-' + sub.slug">
+
+            <div class="ug-subcat__head">
+                <span class="ug-subcat__index">{{ (i + 1) | number: '2.0-0' }}</span>
+                <h2>{{ sub.nombre }}</h2>
+
+                @if (sub.hijos?.length) {
+                <ul class="ug-subcat__hijos">
+                    @for (h of sub.hijos; track h.slug) {
+                    <li>{{ h.nombre }}</li>
+                    }
+                </ul>
+                }
+            </div>
+
+            @if (sub.productos?.length) {
+            <div class="ug-prod-grid">
+                @for (prod of sub.productos; track prod.nombre) {
+                <button type="button" class="ug-prod-card" (click)="abrirLightbox(prod)">
+
+                    <div class="ug-prod-card__media">
+                        <img [src]="prod.imagen" [alt]="prod.nombre" loading="lazy" (error)="onImgError($event)" />
+                    </div>
+
+                    <div class="ug-prod-card__body">
+                        @if (prod.etiqueta) {
+                        <span class="ug-prod-card__tag">{{ prod.etiqueta }}</span>
+                        }
+                        <h3>{{ prod.nombre }}</h3>
+                        @if (prod.descripcion) {
+                        <p>{{ prod.descripcion }}</p>
+                        }
+                    </div>
+
+                </button>
+                }
+            </div>
+            } @else {
+            <p class="ug-subcat__empty">Pronto agregaremos productos de esta línea.</p>
+            }
+
+        </section>
+        }
+    </div>
+
+    <!-- VOLVER -->
+    <div class="ug-categoria-back">
+        <a routerLink="/productos"><span aria-hidden="true">←</span> Volver a productos</a>
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+@if (productoActivo(); as prod) {
+<div class="ug-lightbox" (click)="cerrarLightbox()">
+    <div class="ug-lightbox__dialog" (click)="$event.stopPropagation()" [style.--acento]="categoria()?.color">
+
+        <button type="button" class="ug-lightbox__close" (click)="cerrarLightbox()" aria-label="Cerrar">×</button>
+
+        <div class="ug-lightbox__media">
+            <img [src]="prod.imagen" [alt]="prod.nombre" (error)="onImgError($event)" />
+        </div>
+
+        <div class="ug-lightbox__info">
+            @if (prod.etiqueta) {
+            <span class="ug-prod-card__tag">{{ prod.etiqueta }}</span>
+            }
+            <h3>{{ prod.nombre }}</h3>
+            @if (prod.descripcion) {
+            <p>{{ prod.descripcion }}</p>
+            }
+        </div>
+
+    </div>
+</div>
+}
+}

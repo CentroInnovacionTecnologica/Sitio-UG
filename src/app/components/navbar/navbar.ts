@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CatalogoService } from '../productos/services/catalogo.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.css'
 })
 export class NavbarComponent {
+  categorias = inject(CatalogoService).getCategorias();
   menuOpen = false;
   isScrolled = false;
 

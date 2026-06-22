@@ -77,7 +77,7 @@
     </div>
 
     <div class="ug-nosotros-divisiones__grid">
-      <article class="ug-nosotros-service" *ngFor="let item of divisiones">
+      <a class="ug-nosotros-service" *ngFor="let item of divisiones" [routerLink]="['/productos', item.icono]">
 
         <div class="ug-nosotros-service__icon" [ngSwitch]="item.icono">
 
@@ -97,7 +97,7 @@
             <path d="M8 10h8" />
           </svg>
 
-          <!-- Bordado (carrete de hilo) -->
+          <!-- Bordado -->
           <svg *ngSwitchCase="'bordado'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M6 4h12" />
@@ -108,7 +108,7 @@
             <line x1="8" y1="15" x2="16" y2="15" />
           </svg>
 
-          <!-- Serigrafía (impresión) -->
+          <!-- Serigrafía -->
           <svg *ngSwitchCase="'serigrafia'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="6 9 6 2 18 2 18 9" />
@@ -126,7 +126,7 @@
             <line x1="14" y1="2" x2="14" y2="4" />
           </svg>
 
-          <!-- Corte de Vinil (tijeras) -->
+          <!-- Corte de Vinil -->
           <svg *ngSwitchCase="'vinil'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="6" cy="6" r="3" />
@@ -141,7 +141,9 @@
         <h3>{{ item.titulo }}</h3>
         <p>{{ item.texto }}</p>
 
-      </article>
+        <span class="ug-nosotros-service-cta" aria-hidden="true">Ver línea →</span>
+
+      </a>
     </div>
   </div>
 
