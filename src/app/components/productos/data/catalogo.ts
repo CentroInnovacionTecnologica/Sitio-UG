@@ -11,7 +11,7 @@ export const CATALOGO: Categoria[] = [
       {
         slug: 'uniformes-escolares',
         nombre: 'Uniformes Escolares',
-        // 👇 PATRÓN: copia esto en las demás subcategorías
+        // PATRÓN: copia esto en las demás subcategorías
         productos: [
           {
             nombre: 'Camisa escolar manga larga',
@@ -68,7 +68,7 @@ export const CATALOGO: Categoria[] = [
       { slug: 'cintos', nombre: 'Cintos', productos: [] },
       { slug: 'birretes', nombre: 'Birretes', productos: [] },
       { slug: 'cubre-trajes', nombre: 'Cubre-trajes', productos: [] },
-      { slug: 'bandas-reyna', nombre: 'Bandas de Reyna', productos: [] },
+      { slug: 'bandas-reyna', nombre: 'Bandas de Reina', productos: [] },
     ],
   },
   {
