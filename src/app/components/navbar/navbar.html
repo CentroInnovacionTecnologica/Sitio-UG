@@ -42,13 +42,23 @@
         CONTACTO
       </a>
 
-      <a routerLink="/cotizar" class="ug-navbar__cta">
-        COTIZAR
-      </a>
+      <div class="ug-navbar__actions">
+        <a routerLink="/cotizar" class="ug-navbar__cta">COTIZAR</a>
+
+        <span class="ug-navbar__divider" aria-hidden="true"></span>
+
+        <button type="button" class="ug-navbar__search-btn" aria-label="Buscar productos" (click)="abrirBusqueda()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
     </nav>
 
     <!-- ===============================
-         BOTÓN MENÚ MÓVIL
+         BOTÓN MENÚ MÓVIL (hamburguesa)
          =============================== -->
     <button class="ug-navbar__toggle" type="button" (click)="toggleMenu()" aria-label="Abrir menú">
       <span [class.active]="menuOpen"></span>
@@ -65,6 +75,16 @@
     <a routerLink="/productos" (click)="closeMenu()">PRODUCTOS</a>
     <a routerLink="/nosotros" (click)="closeMenu()">NOSOTROS</a>
     <a routerLink="/contacto" (click)="closeMenu()">CONTACTO</a>
-    <a routerLink="/contacto" (click)="closeMenu()">COTIZAR</a>
+
+    <button type="button" class="ug-navbar__mobile-search" (click)="abrirBusquedaMobile()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      BUSCAR
+    </button>
+
+    <a routerLink="/cotizar" (click)="closeMenu()">COTIZAR</a>
   </div>
 </header>

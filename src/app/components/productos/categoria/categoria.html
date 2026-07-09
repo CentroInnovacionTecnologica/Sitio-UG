@@ -38,7 +38,7 @@
                 }
             </div>
 
-            @if (sub.productos?.length) {
+            @if (sub.productos.length) {
             <div class="ug-prod-grid">
                 @for (prod of sub.productos; track prod.nombre) {
                 <button type="button" class="ug-prod-card" (click)="abrirLightbox(prod)">

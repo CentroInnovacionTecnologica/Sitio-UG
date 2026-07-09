@@ -1,23 +1,31 @@
 // productos/models/catalogo.model.ts
 export interface Producto {
   nombre: string;
-  imagen: string;        // ej. 'assets/productos/ropa/uniformes-escolares/01.jpg'
+  imagen?: string;
   descripcion?: string;
-  etiqueta?: string;     // ej. 'Más vendido', 'Nuevo'
+  etiqueta?: string;
+  sinonimos?: string[];
+}
+
+export interface Hijo {
+  slug: string;
+  nombre: string;
+  sinonimos?: string[];
 }
 
 export interface Subcategoria {
   slug: string;
   nombre: string;
-  descripcion?: string;
-  hijos?: Subcategoria[];
-  productos?: Producto[];
+  productos: Producto[];
+  hijos?: Hijo[];
+  sinonimos?: string[];
 }
 
 export interface Categoria {
   slug: string;
   nombre: string;
-  descripcion: string;
-  color: string;
+  descripcion?: string;
+  color?: string;
   subcategorias: Subcategoria[];
+  sinonimos?: string[];
 }

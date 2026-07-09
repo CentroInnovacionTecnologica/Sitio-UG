@@ -1,0 +1,75 @@
+@if (overlay.abierto()) {
+<div class="ug-search" (click)="overlay.cerrar()">
+  <div class="ug-search__sheet" (click)="$event.stopPropagation()">
+    <div class="ug-search__inner">
+
+      <div class="ug-search__field">
+        <svg class="ug-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+
+        <input #inputBusqueda type="text" class="ug-search__input"
+               placeholder="Buscar en UG Uniformes"
+               [value]="consulta()"
+               (input)="onInput($any($event.target).value)"
+               (keydown)="onKeydown($event)" />
+
+        <button class="ug-search__esc" type="button" (click)="overlay.cerrar()" aria-label="Cerrar búsqueda">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      @if (resultados().length) {
+      <ul class="ug-search__results">
+        @for (item of resultados(); track item.titulo + item.routerLink.join('/'); let i = $index) {
+        <li>
+          <button class="ug-search__result" type="button"
+                  [class.is-active]="i === activo()"
+                  (mouseenter)="activo.set(i)" (click)="ir(item)">
+            <svg class="ug-search__result-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            <span class="ug-search__result-body">
+              <span class="ug-search__result-title">{{ item.titulo }}</span>
+              <span class="ug-search__result-path">{{ item.seccion }}</span>
+            </span>
+          </button>
+        </li>
+        }
+      </ul>
+      } @else if (consulta().length >= 2) {
+      <div class="ug-search__empty">Sin resultados para “{{ consulta() }}”.</div>
+      } @else {
+      <div class="ug-search__quick">
+        <p class="ug-search__quick-title">Enlaces rápidos</p>
+        <ul class="ug-search__results">
+          @for (item of accesosRapidos; track item.titulo) {
+          <li>
+            <button class="ug-search__result" type="button" (click)="ir(item)">
+              <svg class="ug-search__result-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+              <span class="ug-search__result-body">
+                <span class="ug-search__result-title">{{ item.titulo }}</span>
+              </span>
+            </button>
+          </li>
+          }
+        </ul>
+      </div>
+      }
+
+    </div>
+  </div>
+</div>
+}

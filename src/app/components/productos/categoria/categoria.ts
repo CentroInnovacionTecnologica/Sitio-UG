@@ -1,6 +1,6 @@
 // productos/categoria/categoria.ts
-import { Component, inject, signal, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, signal, effect, HostListener, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
@@ -18,6 +18,7 @@ export class CategoriaComponent {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private catalogo = inject(CatalogoService);
+  private platformId = inject(PLATFORM_ID);
 
   categoria = toSignal(
     this.route.paramMap.pipe(
@@ -29,6 +30,27 @@ export class CategoriaComponent {
       })
     )
   );
+
+  // Fragment de la URL (ej. #cojines)
+  private fragmento = toSignal(this.route.fragment);
+
+  constructor() {
+    // Cuando la categoría ya cargó y hay fragment, hacemos scroll a la sección
+    effect(() => {
+      const cat = this.categoria();
+      const frag = this.fragmento();
+
+      if (!isPlatformBrowser(this.platformId)) return;
+      if (!cat || !frag) return;
+
+      // Pequeño delay para asegurar que las secciones ya están en el DOM
+      setTimeout(() => {
+        document
+          .getElementById('sub-' + frag)
+          ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    });
+  }
 
   // ---- Lightbox ----
   productoActivo = signal<Producto | null>(null);
@@ -46,14 +68,13 @@ export class CategoriaComponent {
     this.cerrarLightbox();
   }
 
-  // ---- Scroll suave al índice ----
+  // ---- Scroll suave al índice (chips) ----
   irA(slug: string): void {
     document
       .getElementById('sub-' + slug)
       ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // ---- Si la foto no existe, ocultamos el <img> y queda el placeholder ----
   onImgError(e: Event): void {
     (e.target as HTMLImageElement).style.display = 'none';
   }
