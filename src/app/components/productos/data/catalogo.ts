@@ -15,29 +15,25 @@ export const CATALOGO: Categoria[] = [
         sinonimos: ['escolar', 'escuela', 'colegio', 'estudiante', 'primaria', 'secundaria'],
         productos: [
           {
-            nombre: 'Camisa escolar manga larga',
+            nombre: 'Uniforme Escolar Niño',
             imagen: '/assets/uniformes-escolares/UniformeNiño.png',
-            descripcion: 'Tela resistente, bordado de logo institucional.',
-            etiqueta: 'Más vendido',
-            sinonimos: ['camisa', 'blusa', 'playera de vestir', 'manga larga'],
+            descripcion: 'Conjunto de saco, camisa, corbata y pantalón con bordado del logo institucional.',
+            sinonimos: [
+              'uniforme', 'uniforme escolar', 'uniforme niño', 'uniforme varonil',
+              'conjunto escolar', 'saco', 'camisa', 'camisa manga larga',
+              'corbata', 'pantalon', 'pantalones', 'traje escolar', 'colegio',
+            ],
           },
           {
-            nombre: 'Pantalón escolar',
-            imagen: 'assets/uniformes-escolares/UniformeNiña.png',
-            descripcion: 'Corte recto, disponible en varios colores.',
-            sinonimos: ['pantalon', 'pants', 'pantalones'],
-          },
-          {
-            nombre: 'Falda tableada',
-            imagen: 'assets/productos/ropa/uniformes-escolares/03.jpg',
-            descripcion: 'Pliegues fijos, dobladillo reforzado.',
-            sinonimos: ['falda', 'faldas', 'tablones', 'tableada'],
-          },
-          {
-            nombre: 'Chaleco institucional',
-            imagen: 'assets/productos/ropa/uniformes-escolares/04.jpg',
-            etiqueta: 'Nuevo',
-            sinonimos: ['chaleco', 'chalecos', 'chalequito'],
+            nombre: 'Uniforme Escolar Niña',
+            imagen: '/assets/uniformes-escolares/UniformeNiña.png',
+            descripcion: 'Conjunto de saco, blusa, moño y falda tableada con bordado del logo institucional.',
+            sinonimos: [
+              'uniforme', 'uniforme escolar', 'uniforme niña', 'uniforme femenil',
+              'conjunto escolar', 'saco', 'blusa', 'camisa', 'mono', 'corbata',
+              'falda', 'falda tableada', 'falda a cuadros', 'tablones', 'tableada',
+              'traje escolar', 'colegio',
+            ],
           },
         ],
       },
@@ -45,7 +41,30 @@ export const CATALOGO: Categoria[] = [
         slug: 'uniformes-industriales',
         nombre: 'Uniformes Industriales y Ropa de Trabajo',
         sinonimos: ['industrial', 'trabajo', 'overol', 'obrero', 'taller', 'operario', 'faena'],
-        productos: [],
+        productos: [
+          {
+            nombre: 'Chaleco de Seguridad Amarillo',
+            imagen: '/assets/uniformes-industriales/ChalecoAmarillo.png',
+            descripcion: 'Chaleco multifuncional con bolsas y bandas reflejantes, bordado del logo institucional.',
+            sinonimos: [
+              'chaleco', 'chaleco de seguridad', 'chaleco reflejante', 'chaleco reflectante',
+              'chaleco industrial', 'chaleco de trabajo', 'chaleco multifuncional',
+              'chaleco de carga', 'alta visibilidad', 'reflejante', 'seguridad',
+              'ropa de trabajo', 'amarillo',
+            ],
+          },
+          {
+            nombre: 'Chaleco de Seguridad Naranja',
+            imagen: '/assets/uniformes-industriales/ChalecoNaranja.png',
+            descripcion: 'Chaleco de malla de alta visibilidad con cintas reflejantes para uso industrial.',
+            sinonimos: [
+              'chaleco', 'chaleco de seguridad', 'chaleco reflejante', 'chaleco reflectante',
+              'chaleco industrial', 'chaleco de trabajo', 'chaleco de malla',
+              'alta visibilidad', 'reflejante', 'seguridad', 'vialidad',
+              'ropa de trabajo', 'naranja',
+            ],
+          },
+        ],
       },
       {
         slug: 'hospitalaria',
