@@ -16,14 +16,14 @@ export const CATALOGO: Categoria[] = [
         productos: [
           {
             nombre: 'Camisa escolar manga larga',
-            imagen: 'assets/productos/ropa/uniformes-escolares/01.jpg',
+            imagen: '/assets/uniformes-escolares/UniformeNiño.png',
             descripcion: 'Tela resistente, bordado de logo institucional.',
             etiqueta: 'Más vendido',
             sinonimos: ['camisa', 'blusa', 'playera de vestir', 'manga larga'],
           },
           {
             nombre: 'Pantalón escolar',
-            imagen: 'assets/productos/ropa/uniformes-escolares/02.jpg',
+            imagen: 'assets/uniformes-escolares/UniformeNiña.png',
             descripcion: 'Corte recto, disponible en varios colores.',
             sinonimos: ['pantalon', 'pants', 'pantalones'],
           },
@@ -87,7 +87,46 @@ export const CATALOGO: Categoria[] = [
         slug: 'bandas-guerra-escolta',
         nombre: 'Bandas de Guerra y Escolta',
         sinonimos: ['banda de guerra', 'escolta', 'marcha', 'ceremonial'],
-        productos: [],
+        productos: [
+          {
+            nombre: 'Uniforme Banda de Guerra',
+            imagen: '/assets/banda-guerra/BandaGuerra1.png',
+            descripcion: 'Casaca de gala en tela resistente con bordado del logo institucional.',
+            sinonimos: [
+              'banda', 'banda de guerra', 'casaca', 'casaca de gala',
+              'uniforme de gala', 'traje de banda', 'traje de guerra',
+            ],
+          },
+          {
+            nombre: 'Uniforme Banda de Guerra',
+            imagen: '/assets/banda-guerra/BandaGuerra2.png',
+            descripcion: 'Corte recto de líneas clásicas, disponible en varios colores.',
+            sinonimos: [
+              'banda', 'banda de guerra', 'casaca', 'casaca de gala',
+              'uniforme de gala', 'traje de banda', 'traje de guerra',
+            ],
+          },
+          {
+            nombre: 'Uniforme Escolta Niño',
+            imagen: '/assets/banda-guerra/Escolta1.png',
+            descripcion: 'Uniforme formal de escolta con detalles dorados y cordón de gala.',
+            sinonimos: [
+              'escolta', 'escolta niño', 'escolta hombre', 'escolta varonil',
+              'uniforme de escolta', 'traje de escolta', 'cordon de gala',
+              'guardia de honor', 'abanderado', 'gala', 'azul marino', 'marino',
+            ],
+          },
+          {
+            nombre: 'Uniforme Escolta Niña',
+            imagen: '/assets/banda-guerra/Escolta2.png',
+            descripcion: 'Uniforme de escolta de corte entallado con charreteras y acabados dorados.',
+            sinonimos: [
+              'escolta', 'escolta niña', 'escolta mujer', 'escolta femenil',
+              'uniforme de escolta', 'traje de escolta', 'charreteras',
+              'guardia de honor', 'abanderada', 'gala', 'rojo', 'entallado',
+            ],
+          },
+        ],
       },
       {
         slug: 'togas-graduacion',
@@ -104,7 +143,46 @@ export const CATALOGO: Categoria[] = [
           { slug: 'entretiempo', nombre: 'Entretiempo', sinonimos: ['media estacion', 'ligera'] },
           { slug: 'campana', nombre: 'Campaña', sinonimos: ['campana', 'promocional', 'evento'] },
         ],
-        productos: [],
+        productos: [
+          {
+            nombre: 'Uniforme Banda de Guerra',
+            imagen: '/assets/chamarras-chalecos/Chaleco.png',
+            descripcion: 'Casaca de gala en tela resistente con bordado del logo institucional.',
+            sinonimos: [
+              'banda', 'banda de guerra', 'casaca', 'casaca de gala',
+              'uniforme de gala', 'traje de banda', 'traje de guerra',
+            ],
+          },
+          {
+            nombre: 'Uniforme Banda de Guerra',
+            imagen: '/assets/chamarras-chalecos/ChalecoAzul.png',
+            descripcion: 'Corte recto de líneas clásicas, disponible en varios colores.',
+            sinonimos: [
+              'banda', 'banda de guerra', 'casaca', 'casaca de gala',
+              'uniforme de gala', 'traje de banda', 'traje de guerra',
+            ],
+          },
+          {
+            nombre: 'Uniforme Escolta Niño',
+            imagen: '/assets/chamarras-chalecos/Chaleco.png',
+            descripcion: 'Uniforme formal de escolta con detalles dorados y cordón de gala.',
+            sinonimos: [
+              'escolta', 'escolta niño', 'escolta hombre', 'escolta varonil',
+              'uniforme de escolta', 'traje de escolta', 'cordon de gala',
+              'guardia de honor', 'abanderado', 'gala', 'azul marino', 'marino',
+            ],
+          },
+          {
+            nombre: 'Uniforme Escolta Niña',
+            imagen: '/assets/chamarras-chalecos/Chaleco.png',
+            descripcion: 'Uniforme de escolta de corte entallado con charreteras y acabados dorados.',
+            sinonimos: [
+              'escolta', 'escolta niña', 'escolta mujer', 'escolta femenil',
+              'uniforme de escolta', 'traje de escolta', 'charreteras',
+              'guardia de honor', 'abanderada', 'gala', 'rojo', 'entallado',
+            ],
+          },
+        ],
       },
     ],
   },

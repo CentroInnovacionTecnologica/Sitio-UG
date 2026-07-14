@@ -211,12 +211,13 @@
 /* ---- media + placeholder ---- */
 .ug-prod-card__media {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 2 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg,
+    background:
+        linear-gradient(135deg,
             color-mix(in srgb, var(--acento) 12%, #fff),
             color-mix(in srgb, var(--acento) 4%, #fff));
 }
@@ -236,7 +237,8 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    z-index: 1;  
     transition: transform 0.5s ease;
 }
 
@@ -358,12 +360,13 @@
 
 .ug-lightbox__media {
     position: relative;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 2 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg,
+    background:
+        linear-gradient(135deg,
             color-mix(in srgb, var(--acento) 14%, #fff),
             color-mix(in srgb, var(--acento) 4%, #fff));
 }
@@ -382,7 +385,8 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    z-index: 1;
 }
 
 .ug-lightbox__info {
