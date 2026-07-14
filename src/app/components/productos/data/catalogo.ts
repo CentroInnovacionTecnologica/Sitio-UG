@@ -2,6 +2,8 @@
 import { Categoria } from '../models/catalogo.model';
 
 export const CATALOGO: Categoria[] = [
+
+  // SECCIÓN DE ROPA
   {
     slug: 'ropa',
     nombre: 'Ropa',
@@ -64,6 +66,17 @@ export const CATALOGO: Categoria[] = [
               'ropa de trabajo', 'naranja',
             ],
           },
+          {
+            nombre: 'Chaleco de Seguridad Verde',
+            imagen: '/assets/uniformes-industriales/ChalecoVerde.png',
+            descripcion: 'Chaleco multifuncional de alta visibilidad con bolsas y bandas reflejantes para uso industrial.',
+            sinonimos: [
+              'chaleco', 'chaleco de seguridad', 'chaleco reflejante', 'chaleco reflectante',
+              'chaleco industrial', 'chaleco de trabajo', 'chaleco multifuncional',
+              'chaleco de carga', 'alta visibilidad', 'reflejante', 'seguridad',
+              'proteccion civil', 'vialidad', 'ropa de trabajo', 'verde', 'verde limon',
+            ],
+          }
         ],
       },
       {
@@ -88,7 +101,39 @@ export const CATALOGO: Categoria[] = [
         slug: 'empresarial-institucional',
         nombre: 'Uniforme Empresarial e Institucional',
         sinonimos: ['empresa', 'oficina', 'corporativo', 'institucional', 'ejecutivo'],
-        productos: [],
+        productos: [
+          {
+            nombre: 'Camisa Empresarial',
+            imagen: '/assets/uniforme-empresarial/CamisaAmarilla.png',
+            descripcion: 'Camisa de manga larga con broches y logo empresarial bordado.',
+            sinonimos: [
+              'camisa', 'blusa', 'camisa empresarial', 'camisa institucional',
+              'camisa de trabajo', 'camisa manga larga', 'camisa vaquera', 'camisa con logo',
+              'camisa bordada', 'playera de vestir', 'uniforme empresarial', 'branding',
+              'amarillo', 'amarilla',
+            ],
+          },
+          {
+            nombre: 'Chaleco Empresarial',
+            imagen: '/assets/uniforme-empresarial/ChalecoEXA.png',
+            descripcion: 'Chaleco utilitario con múltiples bolsas y logo empresarial bordado.',
+            sinonimos: [
+              'chaleco', 'chaleco empresarial', 'chaleco institucional', 'chaleco de trabajo',
+              'chaleco utilitario', 'chaleco reportero', 'chaleco con logo', 'chaleco bordado',
+              'chaleco de bolsas', 'uniforme empresarial', 'branding', 'naranja',
+            ],
+          },
+          {
+            nombre: 'Chaleco Acolchado',
+            imagen: '/assets/uniforme-empresarial/ChalecoRojo.png',
+            descripcion: 'Chaleco acolchado tipo puffer con logos institucionales bordados.',
+            sinonimos: [
+              'chaleco', 'chaleco acolchado', 'chaleco empresarial', 'chaleco institucional',
+              'chaleco puffer', 'chaleco plumifero', 'chaleco termico', 'chaleco de frio',
+              'chaleco con logo', 'chaleco bordado', 'uniforme empresarial', 'rojo',
+            ],
+          },
+        ],
       },
       {
         slug: 'vestuario-folklorico',
@@ -164,47 +209,31 @@ export const CATALOGO: Categoria[] = [
         ],
         productos: [
           {
-            nombre: 'Uniforme Banda de Guerra',
+            nombre: 'Chaleco Acolchado',
             imagen: '/assets/chamarras-chalecos/Chaleco.png',
-            descripcion: 'Casaca de gala en tela resistente con bordado del logo institucional.',
+            descripcion: 'Chaleco acolchado tipo puffer, ligero y abrigador para clima invernal.',
             sinonimos: [
-              'banda', 'banda de guerra', 'casaca', 'casaca de gala',
-              'uniforme de gala', 'traje de banda', 'traje de guerra',
+              'chaleco', 'chaleco acolchado', 'chaleco puffer', 'chaleco plumifero',
+              'chaleco termico', 'chaleco de frio', 'chaleco invernal', 'chaleco sin mangas',
+              'chamarra sin mangas', 'invernal', 'guinda', 'vino', 'rojo',
             ],
           },
           {
-            nombre: 'Uniforme Banda de Guerra',
+            nombre: 'Chaleco Softshell Azul Marino',
             imagen: '/assets/chamarras-chalecos/ChalecoAzul.png',
-            descripcion: 'Corte recto de líneas clásicas, disponible en varios colores.',
+            descripcion: 'Chaleco softshell de corte recto con cierres, ideal para entretiempo.',
             sinonimos: [
-              'banda', 'banda de guerra', 'casaca', 'casaca de gala',
-              'uniforme de gala', 'traje de banda', 'traje de guerra',
-            ],
-          },
-          {
-            nombre: 'Uniforme Escolta Niño',
-            imagen: '/assets/chamarras-chalecos/Chaleco.png',
-            descripcion: 'Uniforme formal de escolta con detalles dorados y cordón de gala.',
-            sinonimos: [
-              'escolta', 'escolta niño', 'escolta hombre', 'escolta varonil',
-              'uniforme de escolta', 'traje de escolta', 'cordon de gala',
-              'guardia de honor', 'abanderado', 'gala', 'azul marino', 'marino',
-            ],
-          },
-          {
-            nombre: 'Uniforme Escolta Niña',
-            imagen: '/assets/chamarras-chalecos/Chaleco.png',
-            descripcion: 'Uniforme de escolta de corte entallado con charreteras y acabados dorados.',
-            sinonimos: [
-              'escolta', 'escolta niña', 'escolta mujer', 'escolta femenil',
-              'uniforme de escolta', 'traje de escolta', 'charreteras',
-              'guardia de honor', 'abanderada', 'gala', 'rojo', 'entallado',
+              'chaleco', 'chaleco softshell', 'chaleco entretiempo', 'chaleco sin mangas',
+              'chaleco de tela', 'chaleco ejecutivo', 'chamarra sin mangas',
+              'entretiempo', 'azul', 'azul marino', 'marino',
             ],
           },
         ],
       },
     ],
   },
+
+  // SECCIÓN DE ACCESORIOS
   {
     slug: 'accesorios',
     nombre: 'Accesorios',
@@ -220,6 +249,8 @@ export const CATALOGO: Categoria[] = [
       { slug: 'bandas-reyna', nombre: 'Bandas de Reina', sinonimos: ['banda de reina', 'banda reina', 'certamen', 'reyna'], productos: [] },
     ],
   },
+
+  // SECCIÓN DE BORDADO
   {
     slug: 'bordado',
     nombre: 'Bordado',
@@ -250,6 +281,8 @@ export const CATALOGO: Categoria[] = [
       { slug: 'maquila-bordado', nombre: 'Capacidad de Maquila en Bordado Plano y Prenda Armada', sinonimos: ['maquila bordado', 'produccion bordado', 'maquilado'], productos: [] },
     ],
   },
+
+  // SECCIÓN DE SERIGRAFÍA
   {
     slug: 'serigrafia',
     nombre: 'Serigrafía',
@@ -264,6 +297,8 @@ export const CATALOGO: Categoria[] = [
       { slug: 'personalizadores', nombre: 'Personalizadores', sinonimos: ['personalizador', 'personalizado', 'customizado'], productos: [] },
     ],
   },
+
+  // SECCIÓN DE SUBLIMADO
   {
     slug: 'sublimado',
     nombre: 'Sublimado',
@@ -277,6 +312,8 @@ export const CATALOGO: Categoria[] = [
       { slug: 'maquila-gran-formato', nombre: 'Capacidad de Maquila en Gran Formato', sinonimos: ['gran formato', 'lona', 'maquila sublimado'], productos: [] },
     ],
   },
+
+  // SECCIÓN DE CORTE DE VINIL
   {
     slug: 'vinil',
     nombre: 'Corte de Vinil',
