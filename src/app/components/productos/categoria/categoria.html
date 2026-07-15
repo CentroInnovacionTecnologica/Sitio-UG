@@ -43,7 +43,8 @@
                 @for (prod of sub.productos; track prod.nombre) {
                 <button type="button" class="ug-prod-card" (click)="abrirLightbox(prod)">
 
-                    <div class="ug-prod-card__media">
+                    <!-- CARD -->
+                    <div class="ug-prod-card__media" [style.--fondo]="prod.fondo || '#ececec'">
                         <img [src]="prod.imagen" [alt]="prod.nombre" loading="lazy" (error)="onImgError($event)" />
                     </div>
 
@@ -82,7 +83,8 @@
 
         <button type="button" class="ug-lightbox__close" (click)="cerrarLightbox()" aria-label="Cerrar">×</button>
 
-        <div class="ug-lightbox__media">
+        <!-- LIGHTBOX -->
+        <div class="ug-lightbox__media" [style.--fondo]="prod.fondo || '#ececec'">
             <img [src]="prod.imagen" [alt]="prod.nombre" (error)="onImgError($event)" />
         </div>
 

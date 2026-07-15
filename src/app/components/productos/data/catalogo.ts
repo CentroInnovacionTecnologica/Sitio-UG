@@ -150,6 +150,7 @@ export const CATALOGO: Categoria[] = [
             nombre: 'Chaleco Acolchado',
             imagen: '/assets/uniforme-empresarial/ChalecoRojo.png',
             descripcion: 'Chaleco acolchado tipo puffer con logos institucionales bordados.',
+            fondo: '#e6e5e5',
             sinonimos: [
               'chaleco', 'chaleco acolchado', 'chaleco empresarial', 'chaleco institucional',
               'chaleco puffer', 'chaleco plumifero', 'chaleco termico', 'chaleco de frio',
@@ -160,6 +161,7 @@ export const CATALOGO: Categoria[] = [
             nombre: 'Chamarra Acolchada',
             imagen: '/assets/uniforme-empresarial/ChamarraNegra.png',
             descripcion: 'Chamarra acolchada tipo puffer con logos institucionales bordados.',
+            fondo: '#e5e5e5',
             sinonimos: [
               'chamarra', 'chamarra acolchado', 'chamarra empresarial', 'chamarra institucional',
               'chamarra puffer', 'chamarra plumifero', 'chamarra termico', 'chamarra de frio',
@@ -290,13 +292,15 @@ export const CATALOGO: Categoria[] = [
         ],
         productos: [
           {
-            nombre: 'Chaleco Acolchado',
+            nombre: 'Chamarra Acolchada Negra',
             imagen: '/assets/chamarras-chalecos/Chamarra.png',
-            descripcion: 'Chaleco acolchado tipo puffer, ligero y abrigador para clima invernal.',
+            descripcion: 'Chamarra acolchada tipo puffer con cuello alto, ligera y abrigadora para clima invernal.',
+            fondo: '#e8e7e7',
             sinonimos: [
-              'chaleco', 'chaleco acolchado', 'chaleco puffer', 'chaleco plumifero',
-              'chaleco termico', 'chaleco de frio', 'chaleco invernal', 'chaleco sin mangas',
-              'chamarra sin mangas', 'invernal', 'guinda', 'vino', 'rojo',
+              'chamarra', 'chamarras', 'chamarra acolchada', 'chamarra puffer',
+              'chamarra plumifero', 'chamarra termica', 'chamarra de frio',
+              'chamarra invernal', 'chaqueta', 'chaqueta acolchada', 'abrigo',
+              'invernal', 'negro', 'negra',
             ],
           },
           {

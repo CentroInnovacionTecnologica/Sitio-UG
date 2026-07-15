@@ -5,6 +5,7 @@ export interface Producto {
   descripcion?: string;
   etiqueta?: string;
   sinonimos?: string[];
+  fondo?: string;
 }
 
 export interface Hijo {

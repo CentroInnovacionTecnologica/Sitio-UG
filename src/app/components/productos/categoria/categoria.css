@@ -216,7 +216,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #ececec;
+    background: var(--fondo, #ececec);
 }
 
 /* icono de "imagen" del placeholder (se ve solo si no hay foto) */
@@ -236,7 +236,7 @@
     height: 100%;
     object-fit: contain;
     z-index: 1;
-    background: #ececec;
+    background: var(--fondo, #ececec);
     transition: transform 0.5s ease;
 }
 
@@ -363,7 +363,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #ececec;
+    background: var(--fondo, #ececec);
 }
 
 .ug-lightbox__media::after {
@@ -382,7 +382,7 @@
     height: 100%;
     object-fit: contain;
     z-index: 1;
-    background: #ececec;
+    background: var(--fondo, #ececec);
 }
 
 .ug-lightbox__info {
