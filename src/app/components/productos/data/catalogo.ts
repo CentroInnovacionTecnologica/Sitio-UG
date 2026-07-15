@@ -37,6 +37,28 @@ export const CATALOGO: Categoria[] = [
               'traje escolar', 'colegio',
             ],
           },
+          {
+            nombre: 'Uniforme Deportivo Azul Marino',
+            imagen: '/assets/uniformes-escolares/UniformeDeportivo.png',
+            descripcion: 'Conjunto de chamarra con cierre y pantalón deportivo con vivos laterales.',
+            sinonimos: [
+              'uniforme', 'uniforme escolar', 'uniforme deportivo', 'deportivo',
+              'pants', 'pantalon deportivo', 'conjunto deportivo', 'chamarra',
+              'chamarra deportiva', 'sudadera', 'chaqueta deportiva', 'ropa deportiva',
+              'educacion fisica', 'deportes', 'colegio', 'azul', 'azul marino', 'marino',
+            ],
+          },
+          {
+            nombre: 'Uniforme Deportivo',
+            imagen: '/assets/uniformes-escolares/UniformeVerde.png',
+            descripcion: 'Conjunto de chamarra y pantalón deportivo con franjas laterales y logo bordado.',
+            sinonimos: [
+              'uniforme', 'uniforme escolar', 'uniforme deportivo', 'deportivo',
+              'pants', 'pantalon deportivo', 'conjunto deportivo', 'chamarra',
+              'chamarra deportiva', 'sudadera', 'chaqueta deportiva', 'ropa deportiva',
+              'educacion fisica', 'deportes', 'colegio', 'verde', 'blanco', 'naranja',
+            ],
+          },
         ],
       },
       {
@@ -132,6 +154,16 @@ export const CATALOGO: Categoria[] = [
               'chaleco', 'chaleco acolchado', 'chaleco empresarial', 'chaleco institucional',
               'chaleco puffer', 'chaleco plumifero', 'chaleco termico', 'chaleco de frio',
               'chaleco con logo', 'chaleco bordado', 'uniforme empresarial', 'rojo',
+            ],
+          },
+          {
+            nombre: 'Chamarra Acolchada',
+            imagen: '/assets/uniforme-empresarial/ChamarraNegra.png',
+            descripcion: 'Chamarra acolchada tipo puffer con logos institucionales bordados.',
+            sinonimos: [
+              'chamarra', 'chamarra acolchado', 'chamarra empresarial', 'chamarra institucional',
+              'chamarra puffer', 'chamarra plumifero', 'chamarra termico', 'chamarra de frio',
+              'chamarra con logo', 'chamarra bordado', 'uniforme empresarial', 'negro',
             ],
           },
         ],
@@ -257,6 +289,16 @@ export const CATALOGO: Categoria[] = [
           { slug: 'campana', nombre: 'Campaña', sinonimos: ['campana', 'promocional', 'evento'] },
         ],
         productos: [
+          {
+            nombre: 'Chaleco Acolchado',
+            imagen: '/assets/chamarras-chalecos/Chamarra.png',
+            descripcion: 'Chaleco acolchado tipo puffer, ligero y abrigador para clima invernal.',
+            sinonimos: [
+              'chaleco', 'chaleco acolchado', 'chaleco puffer', 'chaleco plumifero',
+              'chaleco termico', 'chaleco de frio', 'chaleco invernal', 'chaleco sin mangas',
+              'chamarra sin mangas', 'invernal', 'guinda', 'vino', 'rojo',
+            ],
+          },
           {
             nombre: 'Chaleco Acolchado',
             imagen: '/assets/chamarras-chalecos/Chaleco.png',
