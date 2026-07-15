@@ -59,6 +59,7 @@ export const CATALOGO: Categoria[] = [
             nombre: 'Chaleco de Seguridad Naranja',
             imagen: '/assets/uniformes-industriales/ChalecoNaranja.png',
             descripcion: 'Chaleco de malla de alta visibilidad con cintas reflejantes para uso industrial.',
+            etiqueta: 'Varios Colores',
             sinonimos: [
               'chaleco', 'chaleco de seguridad', 'chaleco reflejante', 'chaleco reflectante',
               'chaleco industrial', 'chaleco de trabajo', 'chaleco de malla',
@@ -196,7 +197,55 @@ export const CATALOGO: Categoria[] = [
         slug: 'togas-graduacion',
         nombre: 'Togas y Accesorios de Graduación',
         sinonimos: ['toga', 'togas', 'graduacion', 'birrete', 'generacion', 'egresado'],
-        productos: [],
+        productos: [
+          {
+            nombre: 'Toga y Birrete de Graduación',
+            imagen: '/assets/graduacion/Toga-ITD.png',
+            descripcion: 'Conjunto de toga negra con birrete y borla, con ribetes en color institucional.',
+            etiqueta: 'varios colores',
+            sinonimos: [
+              'toga', 'togas', 'birrete', 'birretes', 'toga y birrete',
+              'gorro de graduacion', 'sombrero de graduacion', 'borla', 'borlas',
+              'traje de graduacion', 'graduacion', 'titulacion', 'ceremonia',
+              'negro', 'guinda',
+            ],
+          },
+          {
+            nombre: 'Conjunto de Toga, Birrete y Estola',
+            imagen: '/assets/graduacion/Toga.png',
+            descripcion: 'Conjunto de toga azul marino con birrete, borla y estola en dorado.',
+            etiqueta: 'varios colores',
+            sinonimos: [
+              'toga', 'togas', 'birrete', 'birretes', 'estola', 'estolas',
+              'toga y birrete', 'toga con estola', 'conjunto de graduacion',
+              'gorro de graduacion', 'sombrero de graduacion', 'borla', 'borlas',
+              'traje de graduacion', 'graduacion', 'titulacion', 'ceremonia',
+              'azul', 'azul marino', 'marino', 'dorado', 'oro',
+            ],
+          },
+          {
+            nombre: 'Estola de Graduación',
+            imagen: '/assets/graduacion/Estola-ITD.png',
+            descripcion: 'Estola en color institucional con siglas y mascota bordadas.',
+            etiqueta: 'Personalizable',
+            sinonimos: [
+              'estola', 'estolas', 'banda', 'banda de graduacion', 'estola de graduacion',
+              'bufanda de graduacion', 'estola bordada', 'estola personalizada',
+              'graduacion', 'titulacion', 'ceremonia', 'itd', 'guinda', 'vino',
+            ],
+          },
+          {
+            nombre: 'Estola de Graduación Personalizada',
+            imagen: '/assets/graduacion/Estola-EST1.png',
+            descripcion: 'Estola en color institucional con escudo y leyenda bordados a solicitud.',
+            sinonimos: [
+              'estola', 'estolas', 'banda', 'banda de graduacion', 'estola de graduacion',
+              'bufanda de graduacion', 'estola bordada', 'estola personalizada',
+              'escudo', 'logo bordado', 'graduacion', 'titulacion', 'ceremonia',
+              'guinda', 'vino',
+            ],
+          },
+        ],
       },
       {
         slug: 'chamarras-chalecos',
