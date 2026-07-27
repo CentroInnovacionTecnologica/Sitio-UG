@@ -337,7 +337,59 @@ export const CATALOGO: Categoria[] = [
     sinonimos: ['accesorio', 'complemento', 'complementos'],
     subcategorias: [
       { slug: 'pantuflas', nombre: 'Pantuflas', sinonimos: ['pantufla', 'sandalia de casa', 'calzado casa'], productos: [] },
-      { slug: 'cojines', nombre: 'Cojines', sinonimos: ['cojin', 'almohada', 'almohadon'], productos: [] },
+      {
+        slug: 'cojines', nombre: 'Cojines', sinonimos: ['cojin', 'almohada', 'almohadon'],
+        productos: [
+          {
+            nombre: 'Cojín Corazón Rojo',
+            imagen: '/assets/cojines/CojinCorazon.png',
+            descripcion: 'Cojín en forma de corazón con textura afelpada, suave y decorativo, ideal para regalo.',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'cojin', 'cojin corazon', 'cojin de corazon', 'almohada corazon',
+              'almohadon corazon', 'cojin rojo', 'cojin afelpado', 'cojin peludo',
+              'cojin decorativo', 'cojin de regalo', 'cojin san valentin',
+              'cojin amor', 'corazon', 'rojo',
+            ],
+          },
+          {
+            nombre: 'Cojín LOVE Blanco',
+            imagen: '/assets/cojines/CojinLOVE.png',
+            descripcion: 'Cojín rectangular blanco con la palabra "LOVE" bordada, textura suave y estilo romántico.',
+            sinonimos: [
+              'cojin', 'cojin love', 'cojin blanco', 'cojin rectangular',
+              'almohada love', 'almohadon love', 'cojin con letras',
+              'cojin bordado', 'cojin decorativo', 'cojin romantico',
+              'cojin de regalo', 'cojin san valentin', 'cojin amor',
+              'love', 'blanco',
+            ],
+          },
+          {
+            nombre: 'Cojín Corazón LOVE Floral',
+            imagen: '/assets/cojines/CojinRojo.png',
+            descripcion: 'Cojín en forma de corazón rojo con letras "LOVE" en aplicación de tela floral, suave y decorativo.',
+            sinonimos: [
+              'cojin', 'cojin corazon', 'cojin de corazon', 'cojin love',
+              'almohada corazon', 'almohadon corazon', 'cojin rojo',
+              'cojin floral', 'cojin con letras', 'cojin decorativo',
+              'cojin romantico', 'cojin de regalo', 'cojin san valentin',
+              'cojin amor', 'corazon', 'love', 'rojo',
+            ],
+          },
+          {
+            nombre: 'Cojín Emoji Amarillo',
+            imagen: '/assets/cojines/CojinAmarillo.png',
+            descripcion: 'Cojín redondo con diseño de emoji, ideal para regalo.',
+            sinonimos: [
+              'cojin', 'cojin emoji', 'cojin emoticon', 'cojin carita',
+              'cojin amarillo', 'cojin redondo', 'almohada emoji',
+              'almohadon emoji', 'cojin sonriente', 'cojin feliz',
+              'cojin divertido', 'cojin decorativo', 'cojin de regalo',
+              'emoji', 'emoticon', 'carita feliz', 'amarillo',
+            ],
+          },
+        ],
+      },
       { slug: 'cintos', nombre: 'Cintos', sinonimos: ['cinto', 'cinturon', 'faja'], productos: [] },
       { slug: 'birretes', nombre: 'Birretes', sinonimos: ['birrete', 'gorro graduacion', 'gorro toga'], productos: [] },
       { slug: 'cubre-trajes', nombre: 'Cubre-trajes', sinonimos: ['cubre traje', 'funda de traje', 'portatrajes'], productos: [] },
