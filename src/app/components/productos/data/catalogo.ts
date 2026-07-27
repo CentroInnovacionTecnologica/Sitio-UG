@@ -336,7 +336,63 @@ export const CATALOGO: Categoria[] = [
     color: '#1d4ed8',
     sinonimos: ['accesorio', 'complemento', 'complementos'],
     subcategorias: [
-      { slug: 'pantuflas', nombre: 'Pantuflas', sinonimos: ['pantufla', 'sandalia de casa', 'calzado casa'], productos: [] },
+      {
+        slug: 'pantuflas', nombre: 'Pantuflas', sinonimos: ['pantufla', 'sandalia de casa', 'calzado casa'],
+        productos: [
+          {
+            nombre: 'Pantuflas Azul Turquesa',
+            imagen: '/assets/pantunflas/PanAzul.png',
+            descripcion: 'Pantuflas abiertas de peluche suave en color azul turquesa, cómodas y cálidas para estar en casa.',
+            etiqueta: 'VARIOS COLORES',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
+              'pantuflas de peluche', 'pantuflas suaves', 'pantuflas abiertas',
+              'pantuflas de casa', 'chanclas de casa', 'zapatillas de casa',
+              'babuchas', 'pantuflas azules', 'pantuflas turquesa',
+              'azul', 'turquesa', 'azul turquesa',
+            ],
+          },
+          {
+            nombre: 'Pantuflas Moradas',
+            imagen: '/assets/pantunflas/PanMoradas.png',
+            descripcion: 'Pantuflas cerradas de peluche con textura en relieve, color morado, suaves y abrigadoras para el hogar.',
+            etiqueta: 'VARIOS COLORES',
+            sinonimos: [
+              'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
+              'pantuflas de peluche', 'pantuflas suaves', 'pantuflas cerradas',
+              'pantuflas de casa', 'chanclas de casa', 'zapatillas de casa',
+              'babuchas', 'pantuflas moradas', 'pantuflas lila',
+              'morado', 'morada', 'moradas', 'lila', 'violeta',
+            ],
+          },
+          {
+            nombre: 'Pantuflas Estampado Animal Print',
+            imagen: '/assets/pantunflas/PanLeo.png',
+            descripcion: 'Pantuflas abiertas con estampado de leopardo, suaves y elegantes para descansar en casa.',
+            sinonimos: [
+              'pantuflas', 'pantunflas', 'pantufla', 'pantuflas animal print',
+              'pantuflas leopardo', 'pantuflas de leopardo', 'pantuflas estampadas',
+              'pantuflas abiertas', 'pantuflas de peluche', 'pantuflas suaves',
+              'pantuflas de casa', 'chanclas de casa', 'zapatillas de casa',
+              'babuchas', 'animal print', 'leopardo', 'estampado animal',
+              'cafe', 'beige',
+            ],
+          },
+          {
+            nombre: 'Pantuflas Rojas',
+            imagen: '/assets/pantunflas/PanRojas.png',
+            descripcion: 'Pantuflas cerradas de peluche suave en color rojo, cálidas y cómodas para el hogar.',
+            etiqueta: 'VARIOS COLORES',
+            sinonimos: [
+              'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
+              'pantuflas de peluche', 'pantuflas suaves', 'pantuflas cerradas',
+              'pantuflas de casa', 'chanclas de casa', 'zapatillas de casa',
+              'babuchas', 'pantuflas rojas', 'rojo', 'roja', 'rojas',
+            ],
+          },
+        ],
+      },
       {
         slug: 'cojines', nombre: 'Cojines', sinonimos: ['cojin', 'almohada', 'almohadon'],
         productos: [
