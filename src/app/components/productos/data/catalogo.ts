@@ -501,7 +501,61 @@ export const CATALOGO: Categoria[] = [
         ],
       },
       { slug: 'cubre-trajes', nombre: 'Cubre-trajes', sinonimos: ['cubre traje', 'funda de traje', 'portatrajes'], productos: [] },
-      { slug: 'bandas-reyna', nombre: 'Bandas de Reina', sinonimos: ['banda de reina', 'banda reina', 'certamen', 'reyna'], productos: [] },
+      {
+        slug: 'bandas-reyna', nombre: 'Bandas de Reina', sinonimos: ['banda de reina', 'banda reina', 'certamen', 'reyna'],
+        productos: [
+          {
+            nombre: 'Banda de Reina Negra',
+            imagen: '/assets/bandas-reina/BandaNegra.png',
+            descripcion: 'Banda de reina en satén negro con letras doradas y acabado elegante, ideal para coronaciones y eventos.',
+            etiqueta: 'VARIOS COLORES',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'banda', 'bandas', 'banda de reina', 'banda reina', 'banda de coronacion',
+              'banda de certamen', 'banda de belleza', 'banda satinada', 'banda personalizada',
+              'reina', 'coronacion', 'certamen', 'banda negra',
+              'negro', 'negra',
+            ],
+          },
+          {
+            nombre: 'Banda de Princesa Verde',
+            imagen: '/assets/bandas-reina/BandaPrinc.png',
+            descripcion: 'Banda de princesa en satén verde con borde dorado y letras doradas, perfecta para certámenes y celebraciones.',
+            etiqueta: 'PERSONALIZABLES',
+            sinonimos: [
+              'banda', 'bandas', 'banda de princesa', 'banda princesa', 'banda de reina',
+              'banda de coronacion', 'banda de certamen', 'banda de belleza',
+              'banda satinada', 'banda personalizada', 'princesa', 'certamen',
+              'banda verde', 'verde',
+            ],
+          },
+          {
+            nombre: 'Banda de Princesa Real Dorada',
+            imagen: '/assets/bandas-reina/BandaReal.png',
+            descripcion: 'Banda de princesa real en satén dorado con letras oscuras, elegante para coronaciones y eventos especiales.',
+            etiqueta: 'TODAS LAS TALLAS',
+            sinonimos: [
+              'banda', 'bandas', 'banda de princesa real', 'banda princesa real',
+              'banda de reina', 'banda de coronacion', 'banda de certamen',
+              'banda de belleza', 'banda satinada', 'banda personalizada',
+              'princesa real', 'coronacion', 'certamen', 'banda dorada',
+              'dorado', 'dorada', 'oro', 'amarillo',
+            ],
+          },
+          {
+            nombre: 'Banda Miss Fotogenia Azul Marino',
+            imagen: '/assets/bandas-reina/BandaAzul.png',
+            descripcion: 'Banda Miss Fotogenia en satén azul marino con borde y letras doradas, ideal para certámenes de belleza.',
+            sinonimos: [
+              'banda', 'bandas', 'banda miss fotogenia', 'banda fotogenia',
+              'banda de reina', 'banda de coronacion', 'banda de certamen',
+              'banda de belleza', 'banda satinada', 'banda personalizada',
+              'miss fotogenia', 'certamen', 'banda azul', 'banda azul marino',
+              'azul', 'azul marino', 'marino',
+            ],
+          },
+        ],
+      },
     ],
   },
 
