@@ -245,7 +245,8 @@
 .ug-footer__social-icon svg {
   width: 26px;
   height: 26px;
-  color: #fff;            /* color del trazo (currentColor) */
+  color: #fff;
+  /* color del trazo (currentColor) */
 }
 
 .ug-footer__socials a:hover .ug-footer__social-icon {
@@ -387,4 +388,77 @@
     padding: 28px;
   }
 
+}
+
+/* ===================================
+   BOTÓN VOLVER ARRIBA
+=================================== */
+
+.ug-footer__scroll-top {
+  position: fixed;
+  right: 31px;
+  bottom: 100px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(184, 20, 48, 0.9);
+  border: 1px solid rgba(214, 29, 61, 0.6);
+  color: #fff;
+  cursor: pointer;
+  z-index: 998;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(184, 20, 48, 0.35);
+  animation: ug-footer__scroll-fade 0.3s ease;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ug-footer__scroll-top:hover {
+  transform: translateY(-4px);
+
+  background: rgba(214, 29, 61, 1);
+
+  box-shadow: 0 16px 40px rgba(184, 20, 48, 0.5);
+}
+
+.ug-footer__scroll-top:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+@keyframes ug-footer__scroll-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ug-footer__scroll-top {
+    animation: none;
+    transition: background 0.25s ease;
+  }
+
+  .ug-footer__scroll-top:hover,
+  .ug-footer__scroll-top:active {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ug-footer__scroll-top {
+    right: 16px;
+    bottom: 84px;
+    width: 52px;
+    height: 52px;
+  }
 }
