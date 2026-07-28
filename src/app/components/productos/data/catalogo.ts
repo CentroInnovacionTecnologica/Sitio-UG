@@ -617,7 +617,63 @@ export const CATALOGO: Categoria[] = [
     subcategorias: [
       { slug: 'gorras', nombre: 'Gorras', sinonimos: ['gorra sublimada', 'cachucha sublimada'], productos: [] },
       { slug: 'prenda-armada', nombre: 'Prenda Armada', sinonimos: ['jersey', 'playera deportiva', 'prenda sublimada'], productos: [] },
-      { slug: 'termos-tazas-vasos', nombre: 'Termos, Tazas y Vasos', sinonimos: ['termo', 'taza', 'vaso', 'mug', 'tarro'], productos: [] },
+      {
+        slug: 'termos-tazas-vasos', nombre: 'Termos, Tazas y Vasos', sinonimos: ['termo', 'taza', 'vaso', 'mug', 'tarro'],
+        productos: [
+          {
+            nombre: 'Termo Personalizado para eventos',
+            imagen: '/assets/termos/Termo.png',
+            descripcion: 'Termo deportivo blanco de aluminio con mosquetón, personalizable con nombres y fecha, ideal para bodas y recuerdos.',
+            etiqueta: 'VARIOS COLORES',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'termo', 'termos', 'termo deportivo', 'termo de aluminio', 'termo personalizado',
+              'botella', 'botella de agua', 'botella deportiva', 'cilindro', 'cantimplora',
+              'termo con mosqueton', 'termo de boda', 'recuerdo de boda',
+              'personalizado', 'boda', 'blanco',
+            ],
+          },
+          {
+            nombre: 'Tazas Personalizadas para Pareja',
+            imagen: '/assets/termos/Tazas.png',
+            descripcion: 'Set de tazas de cerámica blancas con diseño personalizable, ideales para parejas y regalos originales.',
+            etiqueta: 'PERSONALIZABLES',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'taza', 'tazas', 'taza personalizada', 'tazas personalizadas', 'taza de ceramica',
+              'taza de cafe', 'mug', 'jarro', 'pocillo', 'taza de pareja',
+              'tazas de pareja', 'taza de regalo', 'set de tazas',
+              'personalizada', 'ceramica', 'blanco',
+            ],
+          },
+          {
+            nombre: 'Vasos con Popote Personalizados',
+            imagen: '/assets/termos/Vaso.png',
+            descripcion: 'Vasos transparentes con tapa y popote, personalizables con nombre o diseño, ideales para despedidas y eventos.',
+            etiqueta: 'VARIOS COLORES',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'vaso', 'vasos', 'vaso con popote', 'vaso con tapa', 'vaso personalizado',
+              'vasos personalizados', 'botella', 'botella con popote', 'cilindro con popote',
+              'vaso de despedida', 'bride to be', 'despedida de soltera',
+              'personalizado', 'transparente',
+            ],
+          },
+          {
+            nombre: 'Termo para Empresa Personalizable',
+            imagen: '/assets/termos/TermoAzul.png',
+            descripcion: 'Termo de aluminio azul metálico, personalizable con logo o nombre de empresa, ideal para regalos corporativos y promocionales.',
+            etiqueta: 'VARIOS COLORES',
+          
+            sinonimos: [
+              'termo', 'termos', 'termo deportivo', 'termo de aluminio', 'termo personalizado',
+              'termo empresarial', 'termo corporativo', 'termo promocional', 'termo con logo',
+              'botella', 'botella de agua', 'botella deportiva', 'cilindro', 'cantimplora',
+              'regalo corporativo', 'empresa', 'personalizado', 'azul', 'azul metalico',
+            ],
+          },
+        ],
+      },
       { slug: 'maquila-gran-formato', nombre: 'Capacidad de Maquila en Gran Formato', sinonimos: ['gran formato', 'lona', 'maquila sublimado'], productos: [] },
     ],
   },
