@@ -19,9 +19,7 @@
   color: #fff;
 }
 
-/* ===================================
-   GLOWS
-=================================== */
+/* GLOWS */
 
 .ug-footer__glow {
   position: absolute;
@@ -52,9 +50,7 @@
     rgba(184, 20, 48, 0.14);
 }
 
-/* ===================================
-   TOP
-=================================== */
+/* TOP */
 
 .ug-footer__top {
   position: relative;
@@ -102,9 +98,7 @@
   font-size: 1.05rem;
 }
 
-/* ===================================
-   BADGES
-=================================== */
+/* BADGES */
 
 .ug-footer__badges {
   margin-top: 34px;
@@ -136,9 +130,7 @@
   backdrop-filter: blur(10px);
 }
 
-/* ===================================
-   CARDS
-=================================== */
+/* CARDS */
 
 .ug-footer__cards {
   position: relative;
@@ -194,9 +186,7 @@
   letter-spacing: 2px;
 }
 
-/* ===================================
-   SOCIALS
-=================================== */
+/* SOCIALS */
 
 .ug-footer__socials {
   display: flex;
@@ -269,9 +259,7 @@
   color: #9ca3af;
 }
 
-/* ===================================
-   CONTACTO
-=================================== */
+/* CONTACTO */
 
 .ug-footer__contact-list {
   display: flex;
@@ -318,9 +306,7 @@
   margin-top: 2px;
 }
 
-/* ===================================
-   MAPA
-=================================== */
+/* MAPA */
 
 .ug-footer__map-wrap {
   overflow: hidden;
@@ -344,9 +330,7 @@
   transform: scale(1.04);
 }
 
-/* ===================================
-   BOTTOM
-=================================== */
+/* BOTTOM */
 
 .ug-footer__bottom {
   position: relative;
@@ -362,9 +346,7 @@
   color: #6b7280;
 }
 
-/* ===================================
-   RESPONSIVE
-=================================== */
+/* RESPONSIVE */
 
 @media (max-width: 980px) {
 
@@ -390,9 +372,7 @@
 
 }
 
-/* ===================================
-   BOTÓN VOLVER ARRIBA
-=================================== */
+/* BOTÓN VOLVER ARRIBA */
 
 .ug-footer__scroll-top {
   position: fixed;
