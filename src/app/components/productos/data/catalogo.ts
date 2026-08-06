@@ -597,13 +597,22 @@ export const CATALOGO: Categoria[] = [
             etiqueta: 'PERSONALIZABLE',
             fondo: '#ebeaea',
             sinonimos: [
-              'gorras de pareja',
-              'gorras para novios',
-              'gorras con nombre',
-              'cachuchas bordadas',
-              'gorras personalizadas',
-              'regalo bordado',
+              'gorras de pareja', 'gorras para novios', 'gorras con nombre',
+              'cachuchas bordadas', 'gorras personalizadas', 'regalo bordado',
               'set de gorras',
+            ],
+          },
+          {
+            nombre: 'Gorras bordadas para negocio',
+            imagen: 'assets/bordado-directo/BabyB.png',
+            descripcion:
+              'Gorra para negocio con bordado especial para trabajo',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#ebeaea',
+            sinonimos: [
+              'gorras de pareja', 'gorras para novios', 'gorras con nombre',
+              'gorras para negocio', 'gorras para trabajo', 'cachuchas bordadas',
+              'gorras personalizadas', 'regalo bordado', 'set de gorras',
             ],
           },
         ],
@@ -622,7 +631,38 @@ export const CATALOGO: Categoria[] = [
     color: '#b45309',
     sinonimos: ['serigrafia', 'estampado', 'screen', 'impresion textil', 'serigrafiado'],
     subcategorias: [
-      { slug: 'gorras', nombre: 'Gorras', sinonimos: ['gorra', 'cachucha', 'gorras estampadas'], productos: [] },
+      {
+        slug: 'gorras', nombre: 'Gorras', sinonimos: ['gorra', 'cachucha', 'gorras estampadas'],
+        productos: [
+          {
+            nombre: 'Gorra bicolor con apodo bordado',
+            imagen: 'assets/gorras/GorraAzul.png',
+            descripcion:
+              'Bordado a color en alta densidad sobre frente sólido y malla transpirable.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#ededed',
+            sinonimos: [
+              'gorra bordada','cachucha bordada','gorra de malla','gorra bicolor',
+              'gorra snapback','gorra personalizada','gorra con apodo',
+              'gorra con frase','lettering bordado','bordado a color',
+            ],
+          },
+          {
+            nombre: 'Gorra bicolor para equipos y grupos',
+            imagen: 'assets/gorras/GorraRoja.png',
+            descripcion:
+              'Nombres de equipo o apellidos bordados en hilo a color. Ideal por volumen.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#ededed',
+            sinonimos: [
+              'gorras para equipo','gorras por mayoreo','gorra bordada',
+              'cachucha bordada','gorra de malla','gorra bicolor',
+              'gorra snapback','gorra personalizada','gorra con nombre',
+              'gorras familiares','bordado a color',
+            ],
+          },
+        ],
+      },
       { slug: 'prenda-armada', nombre: 'Prenda Armada', sinonimos: ['playera estampada', 'camiseta', 'prenda estampada'], productos: [] },
       { slug: 'banderines', nombre: 'Banderines', sinonimos: ['banderin', 'banderas', 'gallardete'], productos: [] },
       { slug: 'promocionales', nombre: 'Promocionales', sinonimos: ['promocional', 'publicidad', 'articulo publicitario'], productos: [] },
