@@ -573,15 +573,38 @@ export const CATALOGO: Categoria[] = [
         sinonimos: ['bordado gorra', 'bordado prenda', 'bordado directo'],
         productos: [
           {
-            nombre: 'Logo bordado en gorra',
-            imagen: 'assets/productos/bordado/bordado-directo/01.jpg',
-            descripcion: 'Bordado de alta densidad sobre gorra estructurada.',
-            sinonimos: ['gorra bordada', 'cachucha bordada', 'logo gorra'],
+            nombre: 'Gorra con frase bordada',
+            imagen: 'assets/bordado-directo/GorraVerde.png',
+            descripcion:
+              'Bordado de alta densidad sobre gorra trucker de malla. Ideal para frases, nombres o logotipos con acabado en relieve.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#ebeaea',
+            sinonimos: [
+              'gorra bordada',
+              'cachucha bordada',
+              'gorra trucker',
+              'gorra de malla',
+              'gorra personalizada',
+              'bordado de frase',
+              'logo en gorra',
+            ],
           },
           {
-            nombre: 'Bordado en polo institucional',
-            imagen: 'assets/productos/bordado/bordado-directo/02.jpg',
-            sinonimos: ['polo bordado', 'playera bordada', 'camisa bordada'],
+            nombre: 'Gorras bordadas para pareja',
+            imagen: 'assets/bordado-directo/GorraNovios.png',
+            descripcion:
+              'Set de gorras estructuradas con nombre bordado en hilo metálico. Perfectas para regalos, aniversarios y eventos especiales.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#ebeaea',
+            sinonimos: [
+              'gorras de pareja',
+              'gorras para novios',
+              'gorras con nombre',
+              'cachuchas bordadas',
+              'gorras personalizadas',
+              'regalo bordado',
+              'set de gorras',
+            ],
           },
         ],
       },
@@ -664,7 +687,7 @@ export const CATALOGO: Categoria[] = [
             imagen: '/assets/termos/TermoAzul.png',
             descripcion: 'Termo de aluminio azul metálico, personalizable con logo o nombre de empresa, ideal para regalos corporativos y promocionales.',
             etiqueta: 'VARIOS COLORES',
-          
+
             sinonimos: [
               'termo', 'termos', 'termo deportivo', 'termo de aluminio', 'termo personalizado',
               'termo empresarial', 'termo corporativo', 'termo promocional', 'termo con logo',
