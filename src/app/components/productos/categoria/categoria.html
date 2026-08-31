@@ -39,28 +39,7 @@
             </div>
 
             @if (sub.productos.length) {
-            <div class="ug-prod-grid">
-                @for (prod of sub.productos; track prod.nombre) {
-                <button type="button" class="ug-prod-card" (click)="abrirLightbox(prod)">
-
-                    <!-- CARD -->
-                    <div class="ug-prod-card__media" [style.--fondo]="prod.fondo || '#ececec'">
-                        <img [src]="prod.imagen" [alt]="prod.nombre" loading="lazy" (error)="onImgError($event)" />
-                    </div>
-
-                    <div class="ug-prod-card__body">
-                        @if (prod.etiqueta) {
-                        <span class="ug-prod-card__tag">{{ prod.etiqueta }}</span>
-                        }
-                        <h3>{{ prod.nombre }}</h3>
-                        @if (prod.descripcion) {
-                        <p>{{ prod.descripcion }}</p>
-                        }
-                    </div>
-
-                </button>
-                }
-            </div>
+            <app-carrusel-productos [productos]="sub.productos" (abrir)="abrirLightbox($event)" />
             } @else {
             <p class="ug-subcat__empty">Pronto agregaremos productos de esta línea.</p>
             }

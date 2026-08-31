@@ -1,0 +1,36 @@
+<!-- productos/carrusel/carrusel-productos.html -->
+<div class="ug-carrusel" [class.ug-carrusel--scrollable]="hayOverflow()" [style.--visibles]="visibles()">
+
+    <button type="button" class="ug-carrusel__nav ug-carrusel__nav--prev" (click)="desplazar(-1)"
+        [disabled]="!puedeIzquierda()" aria-label="Productos anteriores">
+        <span aria-hidden="true">‹</span>
+    </button>
+
+    <div class="ug-carrusel__pista" #pista (scroll)="actualizarEstado()">
+        @for (prod of productos(); track prod.nombre + prod.imagen) {
+        <button type="button" class="ug-prod-card" (click)="abrir.emit(prod)">
+
+            <div class="ug-prod-card__media" [style.--fondo]="prod.fondo || '#ececec'">
+                <img [src]="prod.imagen" [alt]="prod.nombre" loading="lazy" (error)="onImgError($event)" />
+            </div>
+
+            <div class="ug-prod-card__body">
+                @if (prod.etiqueta) {
+                <span class="ug-prod-card__tag">{{ prod.etiqueta }}</span>
+                }
+                <h3>{{ prod.nombre }}</h3>
+                @if (prod.descripcion) {
+                <p>{{ prod.descripcion }}</p>
+                }
+            </div>
+
+        </button>
+        }
+    </div>
+
+    <button type="button" class="ug-carrusel__nav ug-carrusel__nav--next" (click)="desplazar(1)"
+        [disabled]="!puedeDerecha()" aria-label="Más productos">
+        <span aria-hidden="true">›</span>
+    </button>
+
+</div>

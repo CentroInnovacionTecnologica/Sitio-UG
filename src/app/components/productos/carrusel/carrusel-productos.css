@@ -1,0 +1,222 @@
+:host {
+    display: block;
+}
+
+/* ===============================
+   CARRUSEL
+   =============================== */
+.ug-carrusel {
+    --gap: 22px;
+    --visibles: 4;
+
+    position: relative;
+}
+
+.ug-carrusel__pista {
+    display: flex;
+    gap: var(--gap);
+
+    /* espacio para el hover (-8px) y la sombra de las tarjetas */
+    padding: 10px 2px 26px;
+
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 2px;
+
+    /* oculta la barra de scroll sin perder el gesto de swipe */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.ug-carrusel__pista::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===============================
+   FLECHAS
+   =============================== */
+.ug-carrusel__nav {
+    position: absolute;
+    top: 34%;
+    z-index: 5;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    border-radius: 999px;
+    cursor: pointer;
+
+    color: #111827;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.16);
+
+    font-size: 1.9rem;
+    line-height: 1;
+    transition: all 0.28s ease;
+}
+
+/* solo aparecen si hay más productos de los que caben */
+.ug-carrusel--scrollable .ug-carrusel__nav {
+    display: inline-flex;
+}
+
+.ug-carrusel__nav--prev {
+    left: -14px;
+}
+
+.ug-carrusel__nav--next {
+    right: -14px;
+}
+
+.ug-carrusel__nav span {
+    margin-top: -4px;
+}
+
+.ug-carrusel__nav:hover:not(:disabled) {
+    color: #fff;
+    background: var(--acento, #b81430);
+    border-color: var(--acento, #b81430);
+    transform: scale(1.08);
+}
+
+.ug-carrusel__nav:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===============================
+   TARJETA DE PRODUCTO
+   =============================== */
+.ug-prod-card {
+    /* ancho calculado para que quepan exactamente --visibles tarjetas */
+    flex: 0 0 calc((100% - (var(--visibles) - 1) * var(--gap)) / var(--visibles));
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+    transition: all 0.35s ease;
+}
+
+.ug-prod-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 58px rgba(15, 23, 42, 0.12);
+    border-color: color-mix(in srgb, var(--acento, #b81430) 30%, transparent);
+}
+
+/* ---- media + placeholder ---- */
+.ug-prod-card__media {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--fondo, #ececec);
+}
+
+.ug-prod-card__media::after {
+    content: '';
+    width: 44px;
+    height: 44px;
+    background: #ececec;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.ug-prod-card__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+    background: var(--fondo, #ececec);
+    transition: transform 0.5s ease;
+}
+
+.ug-prod-card:hover .ug-prod-card__media img {
+    transform: scale(1.06);
+}
+
+/* ---- body ---- */
+.ug-prod-card__body {
+    padding: 18px 20px 22px;
+}
+
+.ug-prod-card__tag {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 4px 11px;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--acento, #b81430);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.74rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.ug-prod-card__body h3 {
+    margin: 0;
+    color: #111827;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ug-prod-card__body p {
+    margin: 8px 0 0;
+    color: #5f6b7a;
+    line-height: 1.6;
+    font-size: 0.92rem;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 1180px) {
+    .ug-carrusel {
+        --visibles: 3;
+    }
+}
+
+@media (max-width: 860px) {
+    .ug-carrusel {
+        --visibles: 2;
+    }
+
+    .ug-carrusel__nav--prev {
+        left: 2px;
+    }
+
+    .ug-carrusel__nav--next {
+        right: 2px;
+    }
+}
+
+@media (max-width: 560px) {
+    .ug-carrusel {
+        --visibles: 1.15;
+        /* se asoma la siguiente tarjeta: invita al swipe */
+        --gap: 16px;
+    }
+
+    .ug-carrusel__nav {
+        display: none !important;
+    }
+}

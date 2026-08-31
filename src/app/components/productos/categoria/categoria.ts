@@ -6,11 +6,12 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { CatalogoService } from '../services/catalogo.service';
 import { Producto } from '../models/catalogo.model';
+import { CarruselProductosComponent } from '../carrusel/carrusel-productos';
 
 @Component({
   selector: 'app-categoria',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, CarruselProductosComponent],
   templateUrl: './categoria.html',
   styleUrl: './categoria.css',
 })
