@@ -627,7 +627,7 @@ export const CATALOGO: Categoria[] = [
   {
     slug: 'serigrafia',
     nombre: 'Serigrafía',
-    descripcion: 'Impresión en gorras, prendas, banderines y promocionales.',
+    descripcion: 'La serigrafía es una técnica de impresión que nosotros realizamos para textiles y promocionales. Realizamos impresión sobre cualquier tela, dando así un plus a nuestras prendas.',
     color: '#b45309',
     sinonimos: ['serigrafia', 'estampado', 'screen', 'impresion textil', 'serigrafiado'],
     subcategorias: [
@@ -666,7 +666,6 @@ export const CATALOGO: Categoria[] = [
       { slug: 'prenda-armada', nombre: 'Prenda Armada', sinonimos: ['playera estampada', 'camiseta', 'prenda estampada'], productos: [] },
       { slug: 'banderines', nombre: 'Banderines', sinonimos: ['banderin', 'banderas', 'gallardete'], productos: [] },
       { slug: 'promocionales', nombre: 'Promocionales', sinonimos: ['promocional', 'publicidad', 'articulo publicitario'], productos: [] },
-      { slug: 'personalizadores', nombre: 'Personalizadores', sinonimos: ['personalizador', 'personalizado', 'customizado'], productos: [] },
     ],
   },
 
@@ -674,7 +673,7 @@ export const CATALOGO: Categoria[] = [
   {
     slug: 'sublimado',
     nombre: 'Sublimado',
-    descripcion: 'Personalización en gorras, termos, prendas y gran formato.',
+    descripcion: 'El sublimado es una técnica de impresión que es para siempre ya que se impregna sobre el material, dando un acadabo con calidad fotográfica',
     color: '#7c3aed',
     sinonimos: ['sublimado', 'sublimacion', 'impresion full color', 'sublimada'],
     subcategorias: [
@@ -745,7 +744,7 @@ export const CATALOGO: Categoria[] = [
   {
     slug: 'vinil',
     nombre: 'Corte de Vinil',
-    descripcion: 'Cortes especiales y acabados complementarios.',
+    descripcion: 'El vinil textil se ha convertido en una gran herramienta de nuestros tiempos y en UG uniformes no podíamos quedarnos sin usar esta novesosa técnica.',
     color: '#0f766e',
     sinonimos: ['vinil', 'vinilo', 'corte', 'transfer', 'textil', 'vinil textil', 'corte vinil'],
     subcategorias: [],

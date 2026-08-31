@@ -27,17 +27,17 @@ export class ContactoComponent {
     {
       tipo: 'telefono',
       label: 'Teléfono',
-      value: '(618) 8181355'
+      value: '(618) 8181356'
     },
     {
       tipo: 'correo',
       label: 'Correo electrónico',
-      value: 'hectorguerrero67@hotmail.com'
+      value: 'irispurpura@hotmail.com'
     },
     {
       tipo: 'rfc',
       label: 'RFC',
-      value: 'GUOH 670109 K14'
+      value: 'AASI680312I80'
     }
   ];
 
