@@ -1239,8 +1239,82 @@ export const CATALOGO: Categoria[] = [
     color: '#7c3aed',
     sinonimos: ['sublimado', 'sublimacion', 'impresion full color', 'sublimada'],
     subcategorias: [
-      { slug: 'gorras', nombre: 'Gorras', sinonimos: ['gorra sublimada', 'cachucha sublimada'], productos: [] },
-      { slug: 'prenda-armada', nombre: 'Prenda Armada', sinonimos: ['jersey', 'playera deportiva', 'prenda sublimada'], productos: [] },
+      {
+        slug: 'gorras', nombre: 'Gorras', sinonimos: ['gorra sublimada', 'cachucha sublimada'],
+        productos: [
+
+        ],
+      },
+      {
+        slug: 'prenda-armada',
+        nombre: 'Prenda Armada',
+        sinonimos: [
+          'jersey', 'jerseys', 'playera deportiva', 'playeras deportivas',
+          'prenda sublimada', 'sublimacion', 'sublimado', 'ropa deportiva',
+          'uniforme deportivo', 'equipo deportivo', 'running', 'correr', 'carrera',
+          'maraton', 'triatlon', 'ciclismo', 'crossfit', 'futbol', 'entrenamiento',
+          'dry fit', 'dryfit', 'tela tecnica', 'transpirable',
+        ],
+        productos: [
+          {
+            nombre: 'Jersey de Running Sublimado',
+            imagen: '/assets/sublimados/PlayeraAzul.png',
+            descripcion: 'Jersey de running en tela técnica transpirable, sublimado a todo color con diseño de líneas dinámicas.',
+            etiqueta: 'RUNNING',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'jersey', 'jersey de running', 'playera de running', 'playera para correr',
+              'playera deportiva', 'playera sublimada', 'prenda sublimada', 'sublimacion',
+              'running', 'correr', 'carrera', 'maraton', 'medio maraton', 'atletismo',
+              'tela tecnica', 'dry fit', 'dryfit', 'transpirable', 'secado rapido',
+              'manga corta', 'cuello redondo', 'equipo', 'club', 'negro', 'turquesa', 'azul',
+            ],
+          },
+          {
+            nombre: 'Jersey de Ciclismo Sublimado',
+            imagen: '/assets/sublimados/PlayeraNaranja.png',
+            descripcion: 'Jersey de ciclismo sublimado con franjas diagonales de alto contraste para mayor visibilidad en ruta.',
+            etiqueta: 'CICLISMO',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'jersey', 'jersey de ciclismo', 'playera de ciclismo', 'maillot',
+              'playera deportiva', 'playera sublimada', 'prenda sublimada', 'sublimacion',
+              'ciclismo', 'bicicleta', 'bici', 'ruta', 'montana', 'mtb', 'rodada',
+              'tela tecnica', 'dry fit', 'dryfit', 'transpirable', 'alta visibilidad',
+              'manga corta', 'equipo', 'club', 'negro', 'naranja',
+            ],
+          },
+          {
+            nombre: 'Jersey de Triatlón con Cuello de Cierre',
+            imagen: '/assets/sublimados/PlayeraAmarilla.png',
+            descripcion: 'Jersey de triatlón con cuello alto y cierre corto, sublimado con fotografía a todo color para eventos y equipos.',
+            etiqueta: 'TRIATLÓN',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'jersey', 'jersey de triatlon', 'playera de triatlon', 'playera deportiva',
+              'playera sublimada', 'prenda sublimada', 'sublimacion', 'sublimado fotografico',
+              'triatlon', 'duatlon', 'running', 'correr', 'carrera', 'maraton', 'evento deportivo',
+              'cuello alto', 'medio cierre', 'cierre corto', 'tela tecnica', 'dry fit',
+              'transpirable', 'equipo', 'club', 'patrocinadores', 'dorado', 'negro',
+            ],
+          },
+          {
+            nombre: 'Jersey de Entrenamiento Sublimado',
+            imagen: '/assets/sublimados/PlayeraMorada.png',
+            descripcion: 'Jersey de entrenamiento sublimado con diseño de salpicaduras, apto para gimnasio, crossfit y deportes de equipo.',
+            etiqueta: 'ENTRENAMIENTO',
+            fondo: '#ededed',
+            sinonimos: [
+              'jersey', 'jersey deportivo', 'playera de entrenamiento', 'playera deportiva',
+              'playera sublimada', 'prenda sublimada', 'sublimacion', 'uniforme deportivo',
+              'entrenamiento', 'gimnasio', 'gym', 'crossfit', 'funcional', 'futbol',
+              'basquetbol', 'voleibol', 'torneo', 'liga', 'equipo', 'club',
+              'tela tecnica', 'dry fit', 'dryfit', 'transpirable', 'manga corta',
+              'morado', 'verde', 'azul',
+            ],
+          },
+        ],
+      },
       {
         slug: 'termos-tazas-vasos', nombre: 'Termos, Tazas y Vasos', sinonimos: ['termo', 'taza', 'vaso', 'mug', 'tarro'],
         productos: [
