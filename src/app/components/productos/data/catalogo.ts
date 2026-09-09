@@ -1305,7 +1305,53 @@ export const CATALOGO: Categoria[] = [
         ],
       },
       { slug: 'prenda-armada', nombre: 'Prenda Armada', sinonimos: ['playera estampada', 'camiseta', 'prenda estampada'], productos: [] },
-      { slug: 'banderines', nombre: 'Banderines', sinonimos: ['banderin', 'banderas', 'gallardete'], productos: [] },
+      {
+        slug: 'banderines',
+        nombre: 'Banderines',
+        sinonimos: [
+          'banderin', 'banderines', 'banderas', 'gallardete', 'gallardetes',
+          'estandarte', 'estandartes', 'pendon', 'pendones',
+          'banderin impreso', 'banderines personalizados', 'banderin serigrafia',
+          'banderin de tela', 'banderin publicitario',
+        ],
+        productos: [
+          {
+            nombre: 'Banderín Escolar Impreso',
+            imagen: 'assets/banderines/BanderinETI.png',
+            descripcion:
+              'Banderín escolar en tela blanca con impresión del nombre de la institución y escudos a color. Acabado con fleco y barra superior para asta o soporte.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#ededed',
+            sinonimos: [
+              'banderin escolar', 'banderin de escuela', 'banderin impreso',
+              'banderin secundaria', 'secundaria tecnica', 'escuela secundaria tecnica',
+              'eti', 'secundaria', 'primaria', 'preparatoria', 'bachillerato',
+              'bandera escolar', 'estandarte escolar', 'gallardete', 'pendon',
+              'escudo escolar', 'logo impreso', 'serigrafia', 'impresion en tela',
+              'nombre de escuela', 'clave de escuela', 'cct', 'escolta',
+              'ceremonia', 'honores', 'honores a la bandera', 'desfile',
+              'fleco', 'flecos', 'asta', 'tela blanca',
+            ],
+          },
+          {
+            nombre: 'Banderín Religioso Personalizado',
+            imagen: 'assets/banderines/BanderinJose.png',
+            descripcion:
+              'Banderín para comunidades y grupos religiosos con imagen a color y texto a solicitud. Tela resistente con presillas superiores para colgar o cargar en procesión.',
+            etiqueta: 'IMPRESIÓN A COLOR',
+            fondo: '#ededed',
+            sinonimos: [
+              'banderin religioso', 'banderin de iglesia', 'banderin parroquial',
+              'estandarte religioso', 'estandarte de iglesia', 'pendon religioso',
+              'gallardete', 'comunidad religiosa', 'grupo parroquial', 'parroquia',
+              'iglesia', 'san jose', 'santo', 'santa', 'virgen', 'imagen religiosa',
+              'procesion', 'peregrinacion', 'fiesta patronal', 'posadas',
+              'catequesis', 'impresion a color', 'impresion full color',
+              'sublimacion', 'serigrafia', 'banderin de tela', 'presillas',
+            ],
+          },
+        ],
+      },
       {
         slug: 'promocionales', nombre: 'Promocionales', sinonimos: ['promocional', 'publicidad', 'articulo publicitario'],
         productos: [
