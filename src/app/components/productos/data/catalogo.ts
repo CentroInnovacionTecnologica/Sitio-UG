@@ -1131,6 +1131,67 @@ export const CATALOGO: Categoria[] = [
         sinonimos: ['bordado gorra', 'bordado prenda', 'bordado directo'],
         productos: [
           {
+            nombre: 'Gorra con Escudo Institucional Bordado',
+            imagen: 'assets/bordado-directo/GorraITD.png',
+            descripcion:
+              'Bordado directo del escudo institucional sobre gorra vino. Alta densidad con acabado en relieve.',
+            etiqueta: 'INSTITUCIONAL',
+            fondo: '#e8e8e7',
+            sinonimos: [
+              'gorra bordada', 'cachucha bordada', 'gorra personalizada',
+              'gorra institucional', 'escudo bordado', 'logo en gorra',
+              'logotipo bordado', 'bordado directo', 'bordado en gorra',
+              'itd', 'instituto tecnologico', 'tecnologico de durango',
+              'universidad', 'escuela', 'gorra escolar', 'vino', 'guinda',
+            ],
+          },
+          {
+            nombre: 'Gorra con Mascota Bordada',
+            imagen: 'assets/bordado-directo/GorraPola.png',
+            descripcion:
+              'Bordado directo a color de la mascota institucional. Detalle fino sobre gorra vino.',
+            etiqueta: 'BORDADO A COLOR',
+            fondo: '#e8e8e7',
+            sinonimos: [
+              'gorra bordada', 'cachucha bordada', 'gorra personalizada',
+              'mascota bordada', 'mascota institucional', 'burro', 'pola',
+              'bordado a color', 'bordado directo', 'bordado en gorra',
+              'logo en gorra', 'itd', 'tecnologico de durango', 'porra',
+              'equipo deportivo', 'escuela', 'vino', 'guinda',
+            ],
+          },
+          {
+            nombre: 'Gorra con Inicial Bordada',
+            imagen: 'assets/bordado-directo/GorraT.png',
+            descripcion:
+              'Bordado directo de inicial o monograma en relieve. Letra grande al frente sobre gorra vino.',
+            etiqueta: 'ESTILO UNIVERSITARIO',
+            fondo: '#e8e8e7',
+            sinonimos: [
+              'gorra bordada', 'cachucha bordada', 'gorra personalizada',
+              'gorra con letra', 'gorra con inicial', 'inicial bordada',
+              'monograma', 'letra bordada', 'estilo universitario',
+              'varsity', 'college', 'bordado directo', 'bordado en relieve',
+              'logo en gorra', 'itd', 'tecnologico', 'vino', 'guinda',
+            ],
+          },
+          {
+            nombre: 'Gorra con Nombre Bordado',
+            imagen: 'assets/bordado-directo/GorraTecno.png',
+            descripcion:
+              'Bordado directo de nombre o frase en tipografía universitaria. Cualquier texto a solicitud.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#e8e8e7',
+            sinonimos: [
+              'gorra bordada', 'cachucha bordada', 'gorra personalizada',
+              'gorra con nombre', 'gorra con frase', 'gorra con texto',
+              'bordado de frase', 'nombre bordado', 'texto bordado',
+              'tipografia universitaria', 'varsity', 'bordado directo',
+              'logo en gorra', 'tecno', 'tecnologico', 'itd', 'equipo',
+              'club', 'por mayoreo', 'vino', 'guinda',
+            ],
+          },
+          {
             nombre: 'Gorra con frase bordada',
             imagen: 'assets/bordado-directo/GorraVerde.png',
             descripcion:
@@ -1138,12 +1199,8 @@ export const CATALOGO: Categoria[] = [
             etiqueta: 'PERSONALIZABLE',
             fondo: '#ebeaea',
             sinonimos: [
-              'gorra bordada',
-              'cachucha bordada',
-              'gorra trucker',
-              'gorra de malla',
-              'gorra personalizada',
-              'bordado de frase',
+              'gorra bordada', 'cachucha bordada', 'gorra trucker',
+              'gorra de malla', 'gorra personalizada', 'bordado de frase',
               'logo en gorra',
             ],
           },
@@ -1424,9 +1481,69 @@ export const CATALOGO: Categoria[] = [
     sinonimos: ['sublimado', 'sublimacion', 'impresion full color', 'sublimada'],
     subcategorias: [
       {
-        slug: 'gorras', nombre: 'Gorras', sinonimos: ['gorra sublimada', 'cachucha sublimada'],
+        slug: 'gorras',
+        nombre: 'Gorras',
+        sinonimos: [
+          'gorra', 'gorras', 'gorra sublimada', 'gorras sublimadas',
+          'cachucha', 'cachuchas', 'cachucha sublimada', 'gorra trucker',
+          'gorra de malla', 'gorra personalizada', 'gorras con logo',
+        ],
         productos: [
-
+          {
+            nombre: 'Gorra "Yo ♥ a Durango"',
+            imagen: '/assets/gorras-sub/GorraDurango.png',
+            descripcion: 'Gorra rosa neón con diseño sublimado de Durango. Frente blanco y malla trasera transpirable.',
+            etiqueta: 'SOUVENIR',
+            fondo: '#eaeae9',
+            sinonimos: [
+              'gorra', 'gorras', 'gorra sublimada', 'cachucha', 'gorra trucker',
+              'gorra de malla', 'gorra personalizada', 'sublimacion', 'sublimado',
+              'durango', 'yo amo durango', 'souvenir', 'recuerdo', 'turismo',
+              'regalo', 'rosa', 'rosa neon', 'fucsia', 'malla', 'ajustable',
+            ],
+          },
+          {
+            nombre: 'Gorra para Equipo',
+            imagen: '/assets/gorras-sub/GorraEscobar.png',
+            descripcion: 'Gorra rosa con nombre de equipo o familia sublimado al frente. Texto personalizable.',
+            etiqueta: 'EQUIPOS',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'gorra', 'gorras', 'gorra sublimada', 'cachucha', 'gorra trucker',
+              'gorra de malla', 'gorra personalizada', 'gorra con nombre',
+              'sublimacion', 'sublimado', 'equipo', 'team', 'familia', 'apellido',
+              'reunion familiar', 'deportivo', 'club', 'por mayoreo', 'uniforme',
+              'rosa', 'fucsia', 'malla', 'ajustable',
+            ],
+          },
+          {
+            nombre: 'Gorra de Graduación',
+            imagen: '/assets/gorras-sub/GorraLic.png',
+            descripcion: 'Gorra naranja neón con diseño sublimado de graduación. Ideal como recuerdo de titulación.',
+            etiqueta: 'GRADUACIÓN',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'gorra', 'gorras', 'gorra sublimada', 'cachucha', 'gorra trucker',
+              'gorra de malla', 'gorra personalizada', 'sublimacion', 'sublimado',
+              'graduacion', 'titulacion', 'generacion', 'licenciado', 'licenciada',
+              'lic', 'ingeniero', 'universidad', 'egresado', 'recuerdo de graduacion',
+              'regalo', 'naranja', 'naranja neon', 'malla', 'ajustable',
+            ],
+          },
+          {
+            nombre: 'Gorra con Frase',
+            imagen: '/assets/gorras-sub/GorraCrazy.png',
+            descripcion: 'Gorra verde neón con frase sublimada al frente. Cualquier texto o diseño a solicitud.',
+            etiqueta: 'PERSONALIZABLE',
+            fondo: '#e8e7e7',
+            sinonimos: [
+              'gorra', 'gorras', 'gorra sublimada', 'cachucha', 'gorra trucker',
+              'gorra de malla', 'gorra personalizada', 'gorra con frase',
+              'gorra con texto', 'sublimacion', 'sublimado', 'frase', 'crazy',
+              'divertida', 'fiesta', 'despedida', 'evento', 'regalo',
+              'verde', 'verde neon', 'malla', 'ajustable',
+            ],
+          },
         ],
       },
       {
