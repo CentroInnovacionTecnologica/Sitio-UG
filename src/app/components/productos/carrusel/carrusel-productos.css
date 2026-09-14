@@ -29,6 +29,11 @@
     -ms-overflow-style: none;
 }
 
+.ug-carrusel,
+.ug-carrusel__pista {
+    min-width: 0;
+}
+
 .ug-carrusel__pista::-webkit-scrollbar {
     display: none;
 }
