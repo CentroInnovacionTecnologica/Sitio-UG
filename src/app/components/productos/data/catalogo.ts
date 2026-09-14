@@ -1317,7 +1317,49 @@ export const CATALOGO: Categoria[] = [
           },
         ],
       },
-      { slug: 'maquila-bordado', nombre: 'Capacidad de Maquila en Bordado Plano y Prenda Armada', sinonimos: ['maquila bordado', 'produccion bordado', 'maquilado'], productos: [] },
+      {
+        slug: 'maquila-bordado',
+        nombre: 'Capacidad de Maquila en Bordado Plano y Prenda Armada',
+        sinonimos: [
+          'maquila bordado', 'maquila', 'maquilado', 'produccion bordado',
+          'bordado industrial', 'bordado por volumen', 'bordado por mayoreo',
+          'capacidad de produccion', 'taller de bordado', 'servicio de maquila',
+          'bordado para terceros', 'pedidos grandes',
+        ],
+        productos: [
+          {
+            nombre: 'Bordadora Industrial Multicabezal',
+            imagen: 'assets/maquila-bordado/MaquilaBordado1.png',
+            descripcion:
+              'Equipo industrial multicabezal para bordado plano y prenda armada. Producción simultánea para pedidos por volumen.',
+            etiqueta: 'EQUIPO PROPIO',
+            fondo: '#ededed',
+            sinonimos: [
+              'maquina bordadora', 'bordadora industrial', 'bordadora multicabezal',
+              'multicabezal', 'maquina de bordar', 'equipo de bordado',
+              'bordado industrial', 'bordado plano', 'prenda armada', 'maquila',
+              'maquilado', 'produccion en serie', 'por volumen', 'mayoreo',
+              'pedidos grandes', 'taller de bordado', 'capacidad de produccion',
+            ],
+          },
+          {
+            nombre: 'Línea de Producción de Bordado',
+            imagen: 'assets/maquila-bordado/MaquilaBordado2.png',
+            descripcion:
+              'Taller equipado con varias bordadoras en operación continua. Capacidad para tirajes grandes con acabado uniforme.',
+            etiqueta: 'PRODUCCIÓN EN SERIE',
+            fondo: '#ededed',
+            sinonimos: [
+              'linea de produccion', 'taller de bordado', 'planta de bordado',
+              'maquina bordadora', 'bordadora industrial', 'multicabezal',
+              'bordado industrial', 'bordado plano', 'prenda armada', 'maquila',
+              'maquilado', 'servicio de maquila', 'produccion en serie',
+              'tiraje', 'por volumen', 'mayoreo', 'pedidos grandes',
+              'uniformes', 'empresas', 'capacidad instalada', 'tiempos de entrega',
+            ],
+          },
+        ],
+      },
     ],
   },
 
