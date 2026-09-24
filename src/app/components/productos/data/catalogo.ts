@@ -843,7 +843,7 @@ export const CATALOGO: Categoria[] = [
         productos: [
           {
             nombre: 'Pantuflas Azul Turquesa',
-            imagen: '/assets/pantunflas/PanAzul.png',
+            imagen: '/assets/pantunflas/Pantunflas1.png',
             descripcion: 'Pantuflas abiertas de peluche suave en color azul turquesa, cómodas y cálidas para estar en casa.',
             etiqueta: 'VARIOS COLORES',
             fondo: '#e8e7e7',
@@ -857,9 +857,24 @@ export const CATALOGO: Categoria[] = [
           },
           {
             nombre: 'Pantuflas Moradas',
-            imagen: '/assets/pantunflas/PanMoradas.png',
+            imagen: '/assets/pantunflas/PantRosas.png',
             descripcion: 'Pantuflas cerradas de peluche con textura en relieve, color morado, suaves y abrigadoras para el hogar.',
             etiqueta: 'VARIOS COLORES',
+            fondo: '#e9e9e8',
+            sinonimos: [
+              'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
+              'pantuflas de peluche', 'pantuflas suaves', 'pantuflas cerradas',
+              'pantuflas de casa', 'chanclas de casa', 'zapatillas de casa',
+              'babuchas', 'pantuflas moradas', 'pantuflas lila',
+              'morado', 'morada', 'moradas', 'lila', 'violeta',
+            ],
+          },
+          {
+            nombre: 'Pantuflas Moradas',
+            imagen: '/assets/pantunflas/PantMex.png',
+            descripcion: 'Pantuflas cerradas de peluche con textura en relieve, color morado, suaves y abrigadoras para el hogar.',
+            etiqueta: 'VARIOS COLORES',
+            fondo: '#e9e9e8',
             sinonimos: [
               'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
               'pantuflas de peluche', 'pantuflas suaves', 'pantuflas cerradas',
@@ -870,8 +885,9 @@ export const CATALOGO: Categoria[] = [
           },
           {
             nombre: 'Pantuflas Estampado Animal Print',
-            imagen: '/assets/pantunflas/PanLeo.png',
+            imagen: '/assets/pantunflas/PantAzules.png',
             descripcion: 'Pantuflas abiertas con estampado de leopardo, suaves y elegantes para descansar en casa.',
+            fondo: '#ebebeb',
             sinonimos: [
               'pantuflas', 'pantunflas', 'pantufla', 'pantuflas animal print',
               'pantuflas leopardo', 'pantuflas de leopardo', 'pantuflas estampadas',
@@ -883,9 +899,23 @@ export const CATALOGO: Categoria[] = [
           },
           {
             nombre: 'Pantuflas Rojas',
-            imagen: '/assets/pantunflas/PanRojas.png',
+            imagen: '/assets/pantunflas/PantConv.png',
             descripcion: 'Pantuflas cerradas de peluche suave en color rojo, cálidas y cómodas para el hogar.',
             etiqueta: 'VARIOS COLORES',
+            fondo: '#eae9e9',
+            sinonimos: [
+              'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
+              'pantuflas de peluche', 'pantuflas suaves', 'pantuflas cerradas',
+              'pantuflas de casa', 'chanclas de casa', 'zapatillas de casa',
+              'babuchas', 'pantuflas rojas', 'rojo', 'roja', 'rojas',
+            ],
+          },
+          {
+            nombre: 'Pantuflas Rojas',
+            imagen: '/assets/pantunflas/PantMama.png',
+            descripcion: 'Pantuflas cerradas de peluche suave en color rojo, cálidas y cómodas para el hogar.',
+            etiqueta: 'VARIOS COLORES',
+            fondo: '#eae9e9',
             sinonimos: [
               'pantuflas', 'pantunflas', 'pantufla', 'pantuflas peludas',
               'pantuflas de peluche', 'pantuflas suaves', 'pantuflas cerradas',
