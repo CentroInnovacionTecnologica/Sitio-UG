@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { VideoYoutube } from '../shared/video-youtube/video-youtube';
 
 @Component({
   selector: 'app-nosotros',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, VideoYoutube],
   templateUrl: './nosotros.html',
   styleUrl: './nosotros.css'
 })

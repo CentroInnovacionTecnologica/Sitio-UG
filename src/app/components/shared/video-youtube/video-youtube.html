@@ -1,0 +1,33 @@
+<section class="video-seccion">
+    @if (etiqueta() || titulo()) {
+    <header class="video-encabezado">
+        @if (etiqueta()) {
+        <span class="video-etiqueta">{{ etiqueta() }}</span>
+        }
+        @if (titulo()) {
+        <h2 class="video-titulo">{{ titulo() }}</h2>
+        }
+        @if (descripcion()) {
+        <p class="video-descripcion">{{ descripcion() }}</p>
+        }
+    </header>
+    }
+
+    <div class="video-marco">
+        @if (reproduciendo()) {
+        <iframe [src]="urlEmbed()" [title]="titulo() || 'Video de UG Uniformes'"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        } @else {
+        <button type="button" class="video-portada" (click)="reproducir()"
+            [attr.aria-label]="'Reproducir video: ' + (titulo() || 'UG Uniformes')">
+            <img [src]="miniatura()" alt="" loading="lazy" />
+            <span class="video-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+            </span>
+        </button>
+        }
+    </div>
+</section>
