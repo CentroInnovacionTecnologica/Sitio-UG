@@ -149,28 +149,32 @@
           <div class="ug-form">
             <div class="ug-form__grid">
               <div class="ug-form-group">
-                <label>Nombre completo</label>
+                <label>Nombre completo <span style="color:#b3261e;">*</span></label>
                 <input type="text" [(ngModel)]="nombre" placeholder="Ej. Mario Rosales">
               </div>
               <div class="ug-form-group">
-                <label>Empresa / Institución</label>
+                <label>Empresa / Institución <span style="color:#b3261e;">*</span></label>
                 <input type="text" [(ngModel)]="empresa" placeholder="Opcional">
               </div>
               <div class="ug-form-group">
-                <label>Teléfono</label>
+                <label>Teléfono <span style="color:#b3261e;">*</span></label>
                 <input type="tel" [(ngModel)]="telefono" placeholder="618 ...">
               </div>
               <div class="ug-form-group">
-                <label>Correo electrónico</label>
+                <label>Correo electrónico <span style="color:#b3261e;">*</span></label>
                 <input type="email" [(ngModel)]="correo" placeholder="tu@correo.com">
               </div>
             </div>
 
             <div class="ug-form-group">
-              <label>Detalles del pedido</label>
+              <label>Detalles del pedido <span style="color:#b3261e;">*</span></label>
               <textarea [(ngModel)]="mensaje" placeholder="Colores, tallas, logos, ideas o especificaciones"></textarea>
             </div>
           </div>
+
+          <p class="ug-hint error" *ngIf="error">{{ error }}</p>
+          <p class="ug-hint" *ngIf="enviado" style="color:#1a7f37;">✓ ¡Solicitud enviada con éxito! Te contactaremos
+            pronto.</p>
         </div>
 
       </div>
@@ -186,7 +190,7 @@
           ATRÁS
         </button>
 
-        <button type="button" class="ug-btn-next" (click)="avanzar()">
+        <button type="button" class="ug-btn-next" (click)="avanzar()" [disabled]="enviando">
           <ng-container *ngIf="pasoActual < totalPasos">
             CONTINUAR
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
@@ -196,7 +200,7 @@
             </svg>
           </ng-container>
           <ng-container *ngIf="pasoActual === totalPasos">
-            ENVIAR SOLICITUD
+            {{ enviando ? 'ENVIANDO...' : 'ENVIAR SOLICITUD' }}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
               stroke-linejoin="round">
               <line x1="22" y1="2" x2="11" y2="13" />

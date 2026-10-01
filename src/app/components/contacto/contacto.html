@@ -66,8 +66,8 @@
     </div>
 
     <!-- ===============================
-         FORMULARIO
-         =============================== -->
+     FORMULARIO
+     =============================== -->
     <div class="ug-contacto-page__form">
       <div class="ug-contacto-page__form-head">
         <p class="ug-eyebrow">SOLICITUD</p>
@@ -78,29 +78,29 @@
       </div>
 
       <div class="ug-contacto-page__group">
-        <label>Nombre completo</label>
+        <label>Nombre completo <span style="color:#b3261e;">*</span></label>
         <input type="text" [(ngModel)]="nombre" placeholder="Tu nombre completo">
       </div>
 
       <div class="ug-contacto-page__group">
-        <label>Empresa / Institución</label>
+        <label>Empresa / Institución <span style="color:#b3261e;">*</span></label>
         <input type="text" [(ngModel)]="empresa" placeholder="Nombre de tu empresa o escuela">
       </div>
 
       <div class="ug-contacto-page__form-row">
         <div class="ug-contacto-page__group">
-          <label>Teléfono</label>
+          <label>Teléfono <span style="color:#b3261e;">*</span></label>
           <input type="tel" [(ngModel)]="telefono" placeholder="Tu número de teléfono">
         </div>
 
         <div class="ug-contacto-page__group">
-          <label>Correo electrónico</label>
+          <label>Correo electrónico <span style="color:#b3261e;">*</span></label>
           <input type="email" [(ngModel)]="correo" placeholder="Tu correo electrónico">
         </div>
       </div>
 
       <div class="ug-contacto-page__group">
-        <label>Tipo de servicio</label>
+        <label>Tipo de servicio <span style="color:#b3261e;">*</span></label>
         <select [(ngModel)]="servicio">
           <option value="">Selecciona una opción</option>
           <option value="Uniformes escolares">Uniformes escolares</option>
@@ -115,17 +115,22 @@
       </div>
 
       <div class="ug-contacto-page__group">
-        <label>Descripción de tu pedido</label>
+        <label>Descripción de tu pedido <span style="color:#b3261e;">*</span></label>
         <textarea [(ngModel)]="mensaje"
           placeholder="Describe cantidades aproximadas, tipo de uniforme, colores, logo o servicio requerido..."></textarea>
       </div>
 
-      <button type="button" class="ug-contacto-page__submit" (click)="enviarFormulario()">
-        ENVIAR SOLICITUD
+      <button type="button" class="ug-contacto-page__submit" (click)="enviarFormulario()" [disabled]="enviando">
+        {{ enviando ? 'ENVIANDO...' : 'ENVIAR SOLICITUD' }}
       </button>
 
-      <div class="ug-contacto-page__success" *ngIf="enviado">
+      <div class="ug-contacto-page__success" *ngIf="enviado"
+        style="background:#e6f4ea; border-color:rgba(26,127,55,0.25); color:#1a7f37;">
         ✓ ¡Solicitud enviada con éxito! Te contactaremos pronto.
+      </div>
+
+      <div class="ug-contacto-page__success" *ngIf="error" style="background:#fdecea; color:#b3261e;">
+        {{ error }}
       </div>
     </div>
   </div>
